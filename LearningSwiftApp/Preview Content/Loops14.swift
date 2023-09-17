@@ -7,6 +7,10 @@
 
 import SwiftUI
 
+//takeaway:
+//1. the ForEach loop is useful for generating multiple views with similarities
+//2. it can iterate over a range or data (but then also needs the id property)
+
 struct Loops14: View {
     let liste: [String] = ["Hey", "Hoh", "Hi"]
     

@@ -7,6 +7,12 @@
 
 import SwiftUI
 
+//takeaway:
+//1. buttons are highly customisable
+//2. buttons can have a text label or custom labels (can use label view)
+//3. buttons have a role property
+//4. there are predefined buttons: role property, edit, push, toggle, dismiss, rename
+
 struct Buttons18: View {
     
     @State var count: Int = 0
@@ -25,14 +31,14 @@ struct Buttons18: View {
                     .fontWeight(.semibold)
                 
                 
-                //button1
+                //custom button1: text
                 Button("Press me!") {
                     count = count + 1
                     pressed = "'Press me!'"
                 }
                 
                 
-                //button2
+                //custom button2
                 Button {
                     count = count + 1
                     pressed = "'SAVE'"
@@ -46,7 +52,7 @@ struct Buttons18: View {
                 }
                 
                 
-                //button3
+                //custom button3
                 Button {
                     count = count + 1
                     pressed = "Heart"
@@ -61,7 +67,7 @@ struct Buttons18: View {
                 }
                 
                 
-                //button4
+                //custom button4
                 Button {
                     count = count - 1
                     pressed = "Minus"
@@ -75,12 +81,28 @@ struct Buttons18: View {
                                 .stroke(.gray)
                         )
                 }
-                //role
+                
+                //custom button5: label
+                Button {
+                    
+                } label: {
+                    Label {
+                        Text("Label Button")
+                    } icon: {
+                        Image(systemName: "flame")
+                    }.foregroundColor(.green)
+                }
+
+                
+                
+                //role button1
                 Button(role: .cancel) {
                     
                 } label: {
                     Text("Cancel role")
                 }
+                
+                //role button2
                 Button(role: .destructive) {
                     
                 } label: {
@@ -104,7 +126,6 @@ struct PredefinedButtons: View {
             EditButton()
             PushButton(showSheet: $pushBinding, depth: 5)
             ToggleButton(isNight: $toggleBinding)
-            ExtractedButton(num: 5, name: "Name", backColor: .blue, topColor: $extractedBinding)
             RenameButton()
             DismissButton()
             //PasteButton(payloadType: T##Transferable.Protocol, onPaste: T##([Transferable]) -> Void)

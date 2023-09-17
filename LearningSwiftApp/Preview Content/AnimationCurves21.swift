@@ -8,7 +8,10 @@
 import SwiftUI
 
 //takeaway:
-//predefined animations are sufficient, spring is really usefull
+//1. there are many predefined animations curves
+//2. custom animations are also possible, but more often than not predefined are sufficient
+//3. spring is properly the most useful
+
 struct AnimationCurves21: View {
     @State var animate: Bool = false
     let duration = 2.0
@@ -18,7 +21,6 @@ struct AnimationCurves21: View {
             Button("Animate") {
                 animate.toggle()
             }
-          
             
             //ExtractedView(animate: $animate, animationCurve: .default)
             ExtractedView(animate: $animate, animationCurve: .linear(duration: duration))

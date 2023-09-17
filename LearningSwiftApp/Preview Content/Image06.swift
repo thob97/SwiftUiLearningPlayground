@@ -7,6 +7,11 @@
 
 import SwiftUI
 
+//takeaways:
+//1. change size of image (similar to icon): resizeable + (aspectRatio) + frame
+//2. two ways for clipping
+//3. if transparent -> can color image
+
 struct Image06: View {
     var body: some View {
         Image("test_star1")
@@ -14,20 +19,20 @@ struct Image06: View {
             //TODO: SIZE
             .resizable()
             .aspectRatio(contentMode: .fill)
-            .frame(width: 300, height: 300)
+            .frame(width: 300, height: 200)
+            .background(.red)
             
         
-            //TODO: COLOR
-//            .renderingMode(.template) //has to be on top
+            //TODO: COLOR (if vector/transparent)
+//            .renderingMode(.template) //has to be on top of code
 //            .foregroundColor(.red)
-            
+        
             //TODO: CLIPPING to shape
-//            .clipped()
-//            .cornerRadius(360)
+            .clipped()
             //OR
-            .clipShape(
-                Circle()
-            )
+//            .clipShape(
+//                Circle()
+//            )
     }
 }
 

@@ -8,10 +8,11 @@
 import SwiftUI
 
 //takeaways:
-//1. can use .onChange()
-//2. switch & button versions
+//1. there is a switch & button version
+//2. can be customised using label method with stacks (Z,V,H)
 //3. can be styled with tint
-
+//4. can use .onChange()
+    
 struct Toggle34: View {
     
     @State var toggleIsOn: Bool = false

@@ -6,15 +6,16 @@
 //
 
 import SwiftUI
+
 //Takeaways:
-//1. only need once per app -> don't nest them! -> mostly used at start of app
-//2. useful as provides: AppbarTitle, navBar, navigationLink
-//3. methods can be used in hole tree
-//4. (automatic title works great with scrollViews & navigationLink == push() has great animation)
-//5. navigationBarHidden(true) == replacementPush()
+//1. NavigationView only needed once per app -> don't nest them! -> mostly used at start of app
+//2. useful as provides: AppbarTitle, navBar, navigationLink (methods can be used in hole tree)
+//3. (automatic title works great with scrollViews. And navigationLink(== push()) has great animation)
+//4. navigationBarHidden(true)(== replacementPush())
+//5. navBar is deprecated for Toolbar(== appBar, navBar, ...)
 struct NavigationView25: View {
     var body: some View {
-        NavigationStack {
+        NavigationView {
             ScrollView {
                 //for spacing only
                 VStack(spacing:20) {
@@ -22,11 +23,12 @@ struct NavigationView25: View {
                     //Nav Item
                     NavigationLink("Push replace") {
                         SecondScreen(num: 0)
-                        //like push replacement
+                        //push replacement
                         .navigationBarBackButtonHidden()
                     }
                     
                     ForEach(0..<50) { num in
+                        //push
                         NavigationLink("Push Screen \(num)", destination: SecondScreen(num: num))
                             .frame(width: UIScreen.main.bounds.width)
                     }

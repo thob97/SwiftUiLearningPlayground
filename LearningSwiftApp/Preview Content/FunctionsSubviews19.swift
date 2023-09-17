@@ -8,11 +8,17 @@
 import SwiftUI
 
 ///takeaways:
-/// 1. use var to extract a view only if its stacic
-/// 2. otherwise extract it in new "struct" view
-/// 3. use binding if nested view updates it
-/// (4. funcs can be extracted aswell)
-/// (5. conditionals and shorter versions (Ternary Operators) can be used)
+// 1. use var to extract a view only if its static
+// 2. otherwise extract it in new "struct" view
+// 3. use binding if nested view updates it
+// (4. functions can be extracted as well)
+// (5. conditionals and shorter their versions (Ternary Operators) can be used in views)
+
+//maybe? rule of thumb:
+//1. use variables for properties
+//2. functions for logic
+//3. structs for views(graphical) & models(real world to abstract models)
+
 struct Functions19: View {
     @State var dynColor: Color = .blue
     
@@ -45,12 +51,6 @@ struct Functions19: View {
         .font(.largeTitle)
 }
 
-struct Functions19_Previews: PreviewProvider {
-    static var previews: some View {
-        Functions19().previewDevice(PreviewDevice(rawValue: "iPhone 14 Pro Max"))
-    }
-}
-
 ///extractedView
 struct ExtractedButton: View {
     
@@ -77,5 +77,13 @@ struct ExtractedButton: View {
     ///func
     func updateButton(){
         topColor = backColor
+    }
+}
+
+
+
+struct Functions19_Previews: PreviewProvider {
+    static var previews: some View {
+        Functions19().previewDevice(PreviewDevice(rawValue: "iPhone 14 Pro Max"))
     }
 }

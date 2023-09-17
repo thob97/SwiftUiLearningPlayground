@@ -7,13 +7,16 @@
 
 import SwiftUI
 
-//style (hole predefined list) appbuttons, headers, onelist
 //Takeaways
-//0. like a specialised vStack (always scrollable)
-//1. use full for modifying (move, delete, add items)
-//2. has good predefined formatting
-//3. lists allow sections, items of lists allow onDelete, onMove
-
+//(0. like a specialised vStack (always scrollable))
+//1. dynamic & animated list -> use full for modifying (move, delete, add items)
+//2. has good predefined formatting & some others to choose from (sidebar, plain, grouped, ...)
+//3. works great with predefined EditButton()
+//4. lists allows section items to use onDelete, onMove (should be used when its dynamic)
+//5. sections + normal views can be used inside the list
+//6. section provides headers + optional hide button
+//7. section content/items can be any view -> highly customisable
+//8. list can be styled (some can be placed inside list, some only outside)
 
 struct Lists28: View {
     @State var fruits: [String] = ["Apple","Orange","Banana","Peach"]

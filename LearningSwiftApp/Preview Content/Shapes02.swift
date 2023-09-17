@@ -7,17 +7,38 @@
 
 import SwiftUI
 
+//takeaways:
+//1. there are multiple shapes: circle, capsule, rectangle, roundedRectangle
+//2. they are highly customisable
+
 struct Shapes02: View {
     var body: some View {
-        //Circle()
-        //Capsule()
-        //Rectangle()
-        RoundedRectangle(cornerSize: CGSize(width: 20, height: 20)  , style: .continuous)
-            .trim(from: 0.4, to: 1)
-            .stroke(style: StrokeStyle(lineWidth: 10))
-            .foregroundColor(.red)
-            //.fill(.mint)
-            .frame(width: 200, height: 100)
+        VStack(spacing:100){
+            Circle()
+                .trim(from: 0.4, to: 1)
+                .fill(.mint)
+                .frame(width: 200, height: 100)
+            
+            Capsule()
+                .stroke(style: StrokeStyle(lineWidth: 10))
+                .foregroundColor(.red)
+                .frame(width: 200, height: 100)
+            
+            Rectangle()
+                .stroke(style: StrokeStyle(
+                    lineWidth: 20,
+                    dash: [50],
+                    dashPhase: 5
+                ))
+                .frame(width: 200, height: 100)
+            
+            RoundedRectangle(cornerSize: CGSize(width: 20, height: 20)  , style: .continuous)
+                .trim(from: 0.4, to: 1)
+                .stroke(style: StrokeStyle(lineWidth: 10))
+                .foregroundColor(.red)
+                //.fill(.mint)
+                .frame(width: 200, height: 100)
+        }
     }
 }
 

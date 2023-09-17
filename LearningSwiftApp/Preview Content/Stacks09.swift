@@ -7,6 +7,9 @@
 
 import SwiftUI
 
+//1. zStack, first drawn will be in background
+//2. stacks have alignment & spacing property
+
 struct Stacks09: View {
     var body: some View {
         ZStack (alignment:.top,content:{
@@ -33,7 +36,7 @@ struct Stacks09: View {
                         .foregroundColor(.red)
                     
                     Rectangle()
-                        .frame(width: 20, height: 20)
+                        .frame(width: 80, height: 20)
                         .foregroundColor(.blue)
                 })
                 .background(.white)

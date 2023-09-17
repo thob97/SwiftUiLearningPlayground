@@ -7,11 +7,14 @@
 
 import SwiftUI
 
-///takeaway: padding is usefull as its more adaptive than a fixed size
+//takeaway:
+//1. padding is useful as its more adaptive than a fixed size
+//2. padding tries to push away other objects; if this doesn't work due to boundaries, it compresses itself / gets pushed inwards
+
 struct Padding11: View {
     var body: some View {
         VStack(alignment:.leading) {
-            Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+            Text("Hello, World!")
                 .font(.largeTitle)
                 .fontWeight(.bold)
                 .padding(.bottom)

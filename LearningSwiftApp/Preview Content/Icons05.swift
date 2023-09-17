@@ -7,6 +7,10 @@
 
 import SwiftUI
 
+//takeaways:
+//1. change size of icon: with font, or resizeable + aspectRatio + frame (opt: clipped)
+//2. there are three versions: hierarchical(tint), multicolor(pre defined), pallet(custom)
+
 struct Icons05: View {
     var body: some View {
         Image(systemName: "cloud.sun.rain.fill")
@@ -24,7 +28,7 @@ struct Icons05: View {
             //useful when aspectRation == fill
             .clipped()
             
-            //TODO: for pallte color icons (for 3 definable colors)
+            //TODO: for palette color icons (for 3 definable colors)
 //            .symbolRenderingMode(.palette)
 //            .foregroundStyle(.blue,.orange, .red)
             
@@ -33,11 +37,8 @@ struct Icons05: View {
         
             //TODO: for hierarchical color (one color auto map)
 //            .symbolRenderingMode(.hierarchical)
-//            .foregroundStyle(Color.purple)
-        
+//            .foregroundStyle(Color.purple)   
     }
-    
-    
 }
 
 struct Icons05_Previews: PreviewProvider {

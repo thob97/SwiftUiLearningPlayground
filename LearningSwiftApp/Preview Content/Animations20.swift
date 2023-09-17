@@ -8,10 +8,13 @@
 import SwiftUI
 
 //TAKEAWAY:
-//1. there are two ways to use animation
-// 1.1 withAnimation() in Button (preferred)
-// 1.2 .animation modifier on item (only when needed), multiple are possible -> more fine-grained conf. possible
-//2. animations: animate objects which are already visible/ on the screen (modifiers)
+//1. will animate all changes that are related to the @state property
+// 1.1 either related by condition (state isAnimated: bool)
+// 1.2 (others might also possible but less practical) (eg. related by value (state size: Int)) (but then again this could also be archived by a bool property)
+//2. there are two ways to use animation
+// 2.1 withAnimation() in Button (preferred)
+// 2.2 .animation modifier on item, animations are customisable per view -> more fine-grained configuration
+//3. animations: animate objects which are already visible/ on the screen (modifiers)
 
 struct Animations20: View {
     @State var isAnimated: Bool = false

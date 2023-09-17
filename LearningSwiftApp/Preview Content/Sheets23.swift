@@ -6,11 +6,12 @@
 //
 
 import SwiftUI
+
 //TAKEAWAYS:
 //0. there are sheets and fullscreencovers
 //1. only one .sheet per view possible
 //2. don't add conditional logic to .sheet -> errors -> (but you may add it into the view?)
-//3. to dismiss needs: @Environment(\.presentationMode) (this does not work if sheet & Environment.dismiss() is in the same struct)
+//3. to dismiss needs: @Environment(\.presentationMode) (TODO: this does not work if sheet & Environment.dismiss() is in the same struct -> weird?)
 
 struct Sheets23: View {
     @State var showSheet: Bool = false
@@ -21,24 +22,21 @@ struct Sheets23: View {
             //title
             Text("Current Depth: \(depth)").font(.title)
             
-            Spacer()
-            
             //dismiss button
             if depth>0 { DismissButton() }
 
             //push button
             PushButton(showSheet: $showSheet, depth: depth)
             
-            Spacer()
+            //Sheet (needs binding)
+            //or fullScreenCover
+            .sheet(isPresented: $showSheet) {
+                //DO NOT add conditional logic
+                Sheets23(depth: depth+1)
+            }
             
         }
 
-    }
-}
-
-struct Sheets23_Previews: PreviewProvider {
-    static var previews: some View {
-        Sheets23(depth: 0)
     }
 }
 
@@ -76,12 +74,12 @@ struct PushButton: View {
                 .frame(width: 100, height: 50)
                 .background(Color.blue.cornerRadius(10))
         }
-        
-        //Sheet (needs binding)
-        //or fullScreenCover
-        .sheet(isPresented: $showSheet) {
-            //DO NOT add conditional logic
-            Sheets23(depth: depth+1)
-        }
+    }
+}
+
+
+struct Sheets23_Previews: PreviewProvider {
+    static var previews: some View {
+        Sheets23(depth: 0)
     }
 }

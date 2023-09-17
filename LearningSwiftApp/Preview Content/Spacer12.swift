@@ -7,6 +7,9 @@
 
 import SwiftUI
 
+//takeaway:
+//1. spacer are useful for aligning other views in a stack (to center, to top, to bottom, ...)
+
 struct Spacer12: View {
     var body: some View {
         VStack{

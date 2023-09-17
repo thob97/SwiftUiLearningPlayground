@@ -6,12 +6,14 @@
 //
 
 import SwiftUI
+
 //Takeaway
-//1. use sheets or animation as transitions seem buggy
-//2. transitions are the most dynamic if working, as sheets is a totally new view, while transitions is just like a overlay
+//1. sheets are predefined way to create popovers
+//2. animations & transitions can also be used to archive similar results (but transitions seem bugged)
+//3. transitions & animations are more dynamic, as sheets is a totally new view, while transitions is just like a overlay
 struct Popover24: View {
     @State var showSheet:Bool = false
-    @State var showMoveT: Bool = false
+    @State var showTransitionItem: Bool = false
     @State var showAnimation: Bool = false
     
     var body: some View {
@@ -24,9 +26,9 @@ struct Popover24: View {
                     }
                 
                     Button("2: Transition") {
-                        withAnimation {
-                            showMoveT.toggle()
-                        }
+                        //withAnimation {
+                            showTransitionItem.toggle()
+                        //}
                         
                     }
                     
@@ -45,12 +47,7 @@ struct Popover24: View {
             }
             
             //Method - Transition (hacky, as it needs to be on same Zstack -> did not get it working)
-            if showMoveT {
-                    RoundedRectangle(cornerRadius: 8)
-                        .frame(width: 50, height: 50)
-                        .foregroundColor(.red)
-                        .transition(.move(edge: .bottom))
-            }
+            TransitionScreen(show: $showTransitionItem)
             
             
             //Method 3 - Animation (fairly simple, but renders object at all time)
@@ -59,11 +56,6 @@ struct Popover24: View {
                 //height offset -> out of view, 55 offset -> for spring() animation
                 .offset(y: showAnimation ? 55 : UIScreen.main.bounds.height)
                 .animation(.spring(), value: showAnimation)
-            
-            
-            
-            
-            
         }
     }
 }
@@ -95,6 +87,32 @@ struct AnimationScreen: View {
                     isAnimated = false
             }
         }
+    }
+}
+
+struct TransitionScreen: View {
+    @Binding var show: Bool
+    
+    var body: some View{
+        ZStack(alignment:.bottom){
+            if show {
+                page()
+                    .transition(.move(edge: .bottom))
+            }
+        }.animation(.interpolatingSpring(stiffness: 25, damping: 6.5), value: show) //custom spring animation
+    }
+    
+    func page() -> some View {
+        return ZStack(){
+            //Background
+            Color.red.ignoresSafeArea()
+            //DismissButton
+            Button("Dismiss") {
+                    show = false
+            }
+        }
+        .padding(.top,50) //so that it does not reach the top
+        .offset(y:100) //so that it works with bottom spring animation
     }
 }
 

@@ -8,8 +8,15 @@
 import SwiftUI
 
 //takeaway:
-//1. similar to alerts but come from button
-//2. now called .confirmationDialog
+//1. similar to alerts but come from bottom
+//2. there are two versions
+// 2.1 old: .actionSheet(binding){ActionSheet()} will be deprecated soon
+// 2.2 new: .confirmationDialog(title, binding, actions, message)
+//2. just like alerts -> the old version allows only one per view, to use multiple:
+// 2.1 use enum + conditional
+// 2.2 OR append on different views (e.g. empty ZStack)
+// 2.3 OR use the new Version (confirmationDialog)
+
 struct ActionSheet30: View {
     @State var showAction: Bool = false
     @State var showConfirmation: Bool = false
@@ -17,7 +24,7 @@ struct ActionSheet30: View {
     var body: some View {
         ZStack {
             HStack(spacing: 50) {
-                Button("Show Alert") {
+                Button("Show ActionSheet") {
                     showAction.toggle()
                 }
                 Button("Show Confirmation") {
@@ -34,6 +41,8 @@ struct ActionSheet30: View {
 
 struct MyActionSheet: View {
     @Binding var showAction: Bool
+    
+    //return empty ZStack, so that the .modifier is returnable (+ multiple actionSheets are possible)
     var body: some View {
         ZStack{}.actionSheet(isPresented: $showAction) {
             ActionSheet(
@@ -49,10 +58,10 @@ struct MyActionSheet: View {
     }
 }
 
-//new variante
 struct ConfirmationDia: View {
     @Binding var showAction: Bool
     
+    //return empty ZStack, so that the .modifier is returnable (+ multiple confirmationsDialogs are possible)
     var body: some View {
         ZStack{}.confirmationDialog(
             "ConfirmationDialog Title",

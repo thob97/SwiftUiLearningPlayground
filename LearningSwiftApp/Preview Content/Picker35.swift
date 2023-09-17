@@ -7,22 +7,23 @@
 
 //takeaways
 //1. there are 3 useful styles: segmented, menu, wheel
-//2. custom labels are currently bugged -> workaround can be archived with the use of a "menu"
+//2. TODO: custom labels(initial displayed item) are currently bugged -> workaround can be archived with the use of a "menu"
 //3. styling of content is restricted -> can only be archived when using UIKit
 //4. content can at most display text & image, segmented can only display text
-//5. data can be [string], [Int], [enum] ... pick the most fitting
+//5. data can be [string], [Int], [enum] ... pick the most fitting -> tag & state var needs to be same type -> so that the state var can "catch the tag" (on change: state var = tag)
 
 import SwiftUI
 
 struct Picker35: View {
     @State var pickedSegmented: String = ""
-    @State var pickedMenu: String = ""
-    @State var pickedWheel: String = "Most Liked"
+    @State var pickedMenu: String = "Most Recent"
+    @State var pickedWheel: Int = 2
     let data: [String] = ["Most Recent", "Most Popular", "Most Liked"]
     
     var body: some View {
         VStack(spacing:50){
             
+            //text
             VStack(alignment:.leading){
                 Text("Segmented: \(pickedSegmented)").font(.title)
                 Text("Menu: \(pickedMenu)").font(.title)
@@ -30,7 +31,6 @@ struct Picker35: View {
             }
             .padding(.horizontal)
             .frame(width: UIScreen.main.bounds.width, alignment: .leading)
-            
             
             //segmented (content: can only display text)
             Picker(selection: $pickedSegmented, label: Text("unused")) {
@@ -60,8 +60,8 @@ struct Picker35: View {
             
             //wheel picker -> (title is unused) (content: can display label -> text + pic)
             Picker(selection: $pickedWheel, label: Text("unused")) {
-                ForEach(data, id: \.self) { ele in
-                    Label(ele, systemImage: "flame").tag(ele)
+                ForEach(0..<10) { num in
+                    Label("\(num)", systemImage: "flame").tag(num)
                         .foregroundColor(.red)
                 }
             }

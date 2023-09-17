@@ -11,7 +11,8 @@ import SwiftUI
 //1. works only for iOS 16 and up
 //2. has lazy loading! (unlike navigation view, loads the sites to navigate to only once when pressed)
 //2.1 for lazy move from navLinks(dest) to navDestinations + navLinks(val)
-//3. allows to push multiple screens at once with path, but in most cases navLinks are sufficient and cleaner
+//3. allows to push multiple screens at once with PATH, but in most cases navLinks are sufficient and cleaner
+//4. can replace NavigationView without any changes needed (1:1) (but provides additional functions)
 struct NavigationStack26: View {
     
     @State private var stackedPages: [String] = []
@@ -52,7 +53,7 @@ struct NavigationStack26: View {
             }
             //important
             .navigationDestination(for: String.self) { val in
-                MyPage(title: val)
+                NextPage(title: val)
             }
             //is disabled because of different root type
             .navigationDestination(for: Int.self) { num in
@@ -64,7 +65,7 @@ struct NavigationStack26: View {
     }
 }
 
-struct MyPage: View {
+struct NextPage: View {
     let title: String
     
     init(title: String) {

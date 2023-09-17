@@ -9,22 +9,25 @@ import SwiftUI
 
 //takeaways
 //1. simplest textfield version is sufficient TextField(title ,binding)
-//2. easy validation with simple bool, (more advanced and complex with enums)
-//3. can have special textfield formats
+//2. easy validation with simple bool, just check via condition before calling uploading functions (more advanced and complex with enums)
+//3. can have special textfield formats (like date, number, currency, percent, url, are predefined)
 //4. secure textField also exists
 //5. has some minor preconfigured styles -> mostly must be styled ourselves tho
 //6. has default maxWidth infinity
-//7. use .onSubmit & .focused(for onEditChanged???)
+//7. use .onSubmit & TODO: .focused (for onEditChanged???)
+
 struct TextField32: View {
     @State var textField1: String = ""
     @State var textField3: Date = Date()
     @State var displayData: [String] = []
     @State var displayDate: String = ""
+    @State var num: Decimal.FormatStyle.Percent.FormatInput = Decimal.FormatStyle.Percent.FormatInput(floatLiteral: 100)
     
     var body: some View {
         NavigationStack {
             ZStack {
                 
+                //background
                 Color.green.opacity(0.1).ignoresSafeArea()
                 
                 VStack (alignment:.leading) {
@@ -32,27 +35,29 @@ struct TextField32: View {
                     //validation text
                     if !validate {Text("needs 8 char long text").foregroundColor(.red).padding(.leading)}
                     
-                    //this version should be sufficient in most cases!
-                    //TextField(LocalizedStringKey, text: Binding<String>)
-                    
-                    //prompt var, and first var -> same purpose
-                    TextField("prompt1", text: $textField1, prompt: Text("prompt2"), axis: .horizontal)
+                    //first var & prompt var  -> same purpose, but latter can be customised
+                    TextField("prompt1",
+                              text: $textField1,
+                              prompt: Text("can be customised").foregroundColor(.blue)
+                    )
                         .font(.title)
                         .padding()
                         .background(.gray.opacity(0.1))
                         .cornerRadius(10)
                         .padding()
                         //on enter press
-                        .onSubmit(uploadData)
+                        .onSubmit({
+                            if (validate) {uploadData()}
+                        })
                     
-                    //with label as prompt -> useless as it also only accepts text
-//                    TextField(text: $textField1) {
-//                        Label("Text", systemImage: "pencil.tip")
-//                    }
-                    
-                    //with format
+                    //with predefined formats
                     //format can also be customised
                     TextField("123", value: $textField3, format: .dateTime)
+                        .textFieldStyle(.roundedBorder)
+                        .padding()
+                    
+                    //decimal format
+                    TextField("", value: $num, format: .percent)
                         .textFieldStyle(.roundedBorder)
                         .padding()
                     
@@ -61,7 +66,7 @@ struct TextField32: View {
                         .textFieldStyle(.roundedBorder)
                         .padding()
                     
-                    //Button
+                    //Save Button
                     Button {
                         uploadData()
                     } label: {
@@ -80,11 +85,10 @@ struct TextField32: View {
                     }
                     
                     Spacer()
-
                 }
+                //title
                 .navigationTitle("TextFields")
             }
-            
         }
     }
     

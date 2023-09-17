@@ -7,12 +7,15 @@
 
 import SwiftUI
 
-///takeaway: ignoreSafeArea mostly only in background, most of the time auto handled by swiftui
+//takeaway:
+//1. in this case auto handled by swiftUI
+
 struct SafeArea17: View {
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        Text("Hello, World!")
             .frame(maxWidth: .infinity, maxHeight: .infinity)
-            .background(Color.red.ignoresSafeArea())
+            .background(Color.red)
+            //.ignoresSafeArea()
             
             
     }

@@ -7,6 +7,9 @@
 
 import SwiftUI
 
+//takeaway:
+//1. overlay and background act like stacks -> in some cases useful for better legibility
+
 struct Backgrounds08: View {
     var body: some View {
         //hearth

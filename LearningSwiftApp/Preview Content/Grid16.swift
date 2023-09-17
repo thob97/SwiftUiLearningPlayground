@@ -7,6 +7,11 @@
 
 import SwiftUI
 
+//takeaway:
+//1. useful if you want multiple rows of items
+//2. can have Sections
+//3. sections can be made Pinned
+
 struct Grid16: View {
     
     //TODO: annotate's how many columns
@@ -20,8 +25,8 @@ struct Grid16: View {
     
     var body: some View {
         ScrollView(){
-            //(useless) header
             VStack {
+                //(useless) header
                 Rectangle()
                     .fill(.yellow)
                     .frame(height: 400)

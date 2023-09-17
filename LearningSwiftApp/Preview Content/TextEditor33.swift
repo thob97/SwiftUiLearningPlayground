@@ -9,8 +9,10 @@ import SwiftUI
 
 //takeaways
 //1. like textfields but multiline
-//2. less customizable -> use textfields when possible
-//3. has by default max width and height of intinity
+//2. less customisable -> use textfields when possible
+//3. has by default max width and height of infinity
+//(needs extra step for custom background)
+
 struct TextEditor33: View {
     init() {
         UITextView.appearance().backgroundColor = .clear //for clear background < iOS 15

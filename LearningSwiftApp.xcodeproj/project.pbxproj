@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		017552252AB58F40002FAD6A /* Toolbar27.swift in Sources */ = {isa = PBXBuildFile; fileRef = 017552242AB58F40002FAD6A /* Toolbar27.swift */; };
 		017756422A8559020020020E /* LearningSwiftAppApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 017756412A8559020020020E /* LearningSwiftAppApp.swift */; };
 		017756442A8559020020020E /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 017756432A8559020020020E /* ContentView.swift */; };
 		017756462A8559030020020E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 017756452A8559030020020E /* Assets.xcassets */; };
@@ -67,6 +68,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		017552242AB58F40002FAD6A /* Toolbar27.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Toolbar27.swift; sourceTree = "<group>"; };
 		0177563E2A8559020020020E /* LearningSwiftApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LearningSwiftApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		017756412A8559020020020E /* LearningSwiftAppApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LearningSwiftAppApp.swift; sourceTree = "<group>"; };
 		017756432A8559020020020E /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -199,6 +201,7 @@
 				01B858DE2AB08D0400DE93E1 /* Popover24.swift */,
 				01B858E02AB0A09E00DE93E1 /* NavigationView25.swift */,
 				01B858E22AB1855000DE93E1 /* NavigationStack26.swift */,
+				017552242AB58F40002FAD6A /* Toolbar27.swift */,
 				01B858E42AB1AAE000DE93E1 /* Lists28.swift */,
 				01B858E62AB1D3CA00DE93E1 /* Alerts29.swift */,
 				01F0F1682AB2D64B00485A68 /* ActionSheet30.swift */,
@@ -383,6 +386,7 @@
 				01E71EFE2A87E3AD009F46B4 /* Loops14.swift in Sources */,
 				01E71EEE2A868A47009F46B4 /* Icons05.swift in Sources */,
 				01B858D72AB04A2D00DE93E1 /* Transitions22.swift in Sources */,
+				017552252AB58F40002FAD6A /* Toolbar27.swift in Sources */,
 				01A6738E2AB31C1100829E6B /* Toggle34.swift in Sources */,
 				01E71F002A87E3BF009F46B4 /* ScrollView15.swift in Sources */,
 				01B858D52AB04A1900DE93E1 /* AnimationCurves21.swift in Sources */,

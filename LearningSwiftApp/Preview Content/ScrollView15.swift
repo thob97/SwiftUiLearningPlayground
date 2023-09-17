@@ -8,8 +8,10 @@
 import SwiftUI
 
 
-///takeaways: ScrollView on top of Stack
-/// use Lazy Stacks to load only if in view
+//takeaways:
+//(1. use scrollViews if your view is bigger than your screen)
+//2. use scrollView with Lazy Stacks -> to load only the items if its really on the screen
+
 struct ScrollView15: View {
     var body: some View {
         ScrollView() {

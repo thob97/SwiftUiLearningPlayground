@@ -7,6 +7,10 @@
 
 import SwiftUI
 
+//takeaways:
+//1. color & shadow are widely used
+//2. most often with: background, foregroundColor, fill, tint (==colorScheme)
+
 struct Color03: View {
     var body: some View {
         Rectangle()

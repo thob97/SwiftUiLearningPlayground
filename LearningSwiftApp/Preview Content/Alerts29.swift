@@ -7,9 +7,15 @@
 
 import SwiftUI
 
-//1. for multiple alerts use enum -> switch
-//2. there are two versions, one will be deprecated soon
-//3. why not just use multiple .alerts instead of computation of enum + switch?
+//takeaways
+//1. there are two versions
+// 1.1 old Alert: alert(binding){Alert()} (will be deprecated soon)
+// 1.2 new Alert: alert(title, binding, actions, message)
+//2. if using Opt1: only one .alert is useable as modifier -> multiple will break each other
+//3. to use multiple alerts:
+// 3.1 Method 1: either use enum + conditional for multiple alerts
+// 3.2 Method 2: or connect .alert to different views, (eg zStacks -> simpler & cleaner imo)
+// 3.3 use the new Alert
 
 enum AlertType: LocalizedError{
     case error
@@ -34,54 +40,28 @@ struct Alerts29: View {
                 
                 Button("Error") {
                     alertType = .error
-                    showAlert.toggle()
+                    showAlert2.toggle()
                 }
             }
-            alertNew()
-            //old alert
-           // .alert(isPresented: $showAlert, content: oldAlert)
+            //For testing only -> old Alert: Multi Does not work
+//            newAlertMethod1(alertType: alertType, showAlert: $showAlert)
+//            newAlertMethod1(alertType: alertType, showAlert: $showAlert2)
+            
+            //old Alert: Method2 -> Multi Does Work!
+//            ZStack{}.alert(isPresented: $showAlert) {Alert(title: Text("1"))}
+//            ZStack{}.alert(isPresented: $showAlert2) {Alert(title: Text("2"))}
+            
+            //old Alert: Method1 -> Multi Does Work!
+//           .alert(isPresented: $showAlert, content: oldAlertMethod1)
+            
+            newAlertMulti(showAlert: $showAlert, showAlert2: $showAlert2)
+
             
         }
         
     }
     
-    func alertNew() -> some View {
-        var title: String {
-            switch alertType {
-            case .success:
-                return "Success Title"
-            case .error:
-                return "Error Title"
-            default:
-                return "nil"
-            }
-        }
-        
-        
-        return ZStack{}.alert(title, isPresented: $showAlert) {
-            //actions
-            switch alertType {
-            case .success:
-                Button("OK",role: .cancel) {}
-            case .error:
-                Button("Cancel",role: .cancel) {}
-                Button("Delete", role: .destructive) {}
-            default:
-                Button("nil") {}
-            }
-        } message: {
-            switch alertType {
-            case .success:
-                Text("Success msg")
-            case .error:
-                Text("Error msg")
-            default:
-                Button("nil") {}
-            }
-        }
-    }
-    
-    func oldAlert() -> Alert {
+    func oldAlertMethod1() -> Alert {
         switch alertType {
         case .success:
             return Alert(
@@ -100,7 +80,29 @@ struct Alerts29: View {
                 message: Text("Nil"))
         }
     }
+}
+
+struct newAlertMulti: View {
+    @Binding var showAlert: Bool
+    @Binding var showAlert2: Bool
     
+    var body: some View{
+        ZStack{}
+            .alert("Success", isPresented: $showAlert) {
+                Button("Cancel",role: .cancel) {}
+                Button("Delete", role: .destructive) {}
+            } message: {
+                Text("Success msg")
+            }
+            .alert("Error", isPresented: $showAlert2) {
+                Button("Cancel",role: .cancel) {}
+                Button("Opt1") {}
+                Button("Opt2") {}
+                Button("Opt3") {}
+            } message: {
+                Text("Error msg")
+            }
+    }
 }
 
 struct Alerts29_Previews: PreviewProvider {
