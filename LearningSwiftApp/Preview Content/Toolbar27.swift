@@ -9,10 +9,11 @@ import SwiftUI
 
 //Takeaways
 //1. new version of navBar
-//2. to create a navBar, appBar, appBarMenu, keyboardBar
+//2. to create a bottomNavBar, appBar, appBarMenu, keyboardBar
 //3. adaptive on all apple devices -> mac, iPad, iOS, watchOS, ...
 //4. has many different placements for icons
 //5. regions can be hidden by modifier (even if in deeper depth)
+//6. see also tabview for a bottomNavBar TODO: find out difference: when to choose toolbar(bottomBar) vs TabView(bottomBar)
 
 struct Toolbar27: View {
     var body: some View {
