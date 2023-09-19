@@ -109,10 +109,3 @@ struct TabView40_Previews: PreviewProvider {
         TabView40()
     }
 }
-
-//takeaways:
-//1.
-//2.
-//3.
-//4.
-//5.

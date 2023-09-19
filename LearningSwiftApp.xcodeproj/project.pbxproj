@@ -18,6 +18,12 @@
 		017756752A86634F0020020E /* Shapes02.swift in Sources */ = {isa = PBXBuildFile; fileRef = 017756742A86634F0020020E /* Shapes02.swift */; };
 		017756772A86687E0020020E /* Color03.swift in Sources */ = {isa = PBXBuildFile; fileRef = 017756762A86687E0020020E /* Color03.swift */; };
 		017756792A8682180020020E /* Gradient04.swift in Sources */ = {isa = PBXBuildFile; fileRef = 017756782A8682180020020E /* Gradient04.swift */; };
+		019A33892AB9799B00251EF8 /* Documentation42.swift in Sources */ = {isa = PBXBuildFile; fileRef = 019A33882AB9799B00251EF8 /* Documentation42.swift */; };
+		019A338D2AB98E8600251EF8 /* OnAppearDisappear43.swift in Sources */ = {isa = PBXBuildFile; fileRef = 019A338C2AB98E8600251EF8 /* OnAppearDisappear43.swift */; };
+		019A338F2AB9919500251EF8 /* UnWrapGuard45.swift in Sources */ = {isa = PBXBuildFile; fileRef = 019A338E2AB9919500251EF8 /* UnWrapGuard45.swift */; };
+		019A33912AB9A1B900251EF8 /* onTabGesture44.swift in Sources */ = {isa = PBXBuildFile; fileRef = 019A33902AB9A1B900251EF8 /* onTabGesture44.swift */; };
+		019A33932AB9ABFC00251EF8 /* Models46.swift in Sources */ = {isa = PBXBuildFile; fileRef = 019A33922AB9ABFC00251EF8 /* Models46.swift */; };
+		019A33952AB9BC3000251EF8 /* ObservableObject47.swift in Sources */ = {isa = PBXBuildFile; fileRef = 019A33942AB9BC3000251EF8 /* ObservableObject47.swift */; };
 		01A6738E2AB31C1100829E6B /* Toggle34.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01A6738D2AB31C1100829E6B /* Toggle34.swift */; };
 		01A673902AB32A2A00829E6B /* Picker35.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01A6738F2AB32A2A00829E6B /* Picker35.swift */; };
 		01B858D32AAF427D00DE93E1 /* Animations20.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01B858D22AAF427D00DE93E1 /* Animations20.swift */; };
@@ -29,6 +35,12 @@
 		01B858E32AB1855000DE93E1 /* NavigationStack26.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01B858E22AB1855000DE93E1 /* NavigationStack26.swift */; };
 		01B858E52AB1AAE000DE93E1 /* Lists28.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01B858E42AB1AAE000DE93E1 /* Lists28.swift */; };
 		01B858E72AB1D3CA00DE93E1 /* Alerts29.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01B858E62AB1D3CA00DE93E1 /* Alerts29.swift */; };
+		01C3FDED2AB81F52000F9AF7 /* ColorPicker36.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01C3FDEC2AB81F52000F9AF7 /* ColorPicker36.swift */; };
+		01C3FDEF2AB82482000F9AF7 /* DatePicker37.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01C3FDEE2AB82482000F9AF7 /* DatePicker37.swift */; };
+		01C3FDF12AB83898000F9AF7 /* Stepper38.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01C3FDF02AB83898000F9AF7 /* Stepper38.swift */; };
+		01C3FDF32AB8555F000F9AF7 /* Slider39.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01C3FDF22AB8555F000F9AF7 /* Slider39.swift */; };
+		01C3FDF52AB85C20000F9AF7 /* TabView40.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01C3FDF42AB85C20000F9AF7 /* TabView40.swift */; };
+		01C3FDF72AB8707B000F9AF7 /* DarkMode41.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01C3FDF62AB8707B000F9AF7 /* DarkMode41.swift */; };
 		01E464432AB30C6F00D3C0D3 /* TextEditor33.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01E464422AB30C6F00D3C0D3 /* TextEditor33.swift */; };
 		01E71EEE2A868A47009F46B4 /* Icons05.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01E71EED2A868A47009F46B4 /* Icons05.swift */; };
 		01E71EF02A86B5FC009F46B4 /* Image06.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01E71EEF2A86B5FC009F46B4 /* Image06.swift */; };
@@ -83,6 +95,12 @@
 		017756742A86634F0020020E /* Shapes02.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Shapes02.swift; sourceTree = "<group>"; };
 		017756762A86687E0020020E /* Color03.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Color03.swift; sourceTree = "<group>"; };
 		017756782A8682180020020E /* Gradient04.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Gradient04.swift; sourceTree = "<group>"; };
+		019A33882AB9799B00251EF8 /* Documentation42.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Documentation42.swift; sourceTree = "<group>"; };
+		019A338C2AB98E8600251EF8 /* OnAppearDisappear43.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnAppearDisappear43.swift; sourceTree = "<group>"; };
+		019A338E2AB9919500251EF8 /* UnWrapGuard45.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnWrapGuard45.swift; sourceTree = "<group>"; };
+		019A33902AB9A1B900251EF8 /* onTabGesture44.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = onTabGesture44.swift; sourceTree = "<group>"; };
+		019A33922AB9ABFC00251EF8 /* Models46.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Models46.swift; sourceTree = "<group>"; };
+		019A33942AB9BC3000251EF8 /* ObservableObject47.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ObservableObject47.swift; sourceTree = "<group>"; };
 		01A6738D2AB31C1100829E6B /* Toggle34.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Toggle34.swift; sourceTree = "<group>"; };
 		01A6738F2AB32A2A00829E6B /* Picker35.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Picker35.swift; sourceTree = "<group>"; };
 		01B858D22AAF427D00DE93E1 /* Animations20.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Animations20.swift; sourceTree = "<group>"; };
@@ -94,6 +112,12 @@
 		01B858E22AB1855000DE93E1 /* NavigationStack26.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationStack26.swift; sourceTree = "<group>"; };
 		01B858E42AB1AAE000DE93E1 /* Lists28.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Lists28.swift; sourceTree = "<group>"; };
 		01B858E62AB1D3CA00DE93E1 /* Alerts29.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Alerts29.swift; sourceTree = "<group>"; };
+		01C3FDEC2AB81F52000F9AF7 /* ColorPicker36.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorPicker36.swift; sourceTree = "<group>"; };
+		01C3FDEE2AB82482000F9AF7 /* DatePicker37.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatePicker37.swift; sourceTree = "<group>"; };
+		01C3FDF02AB83898000F9AF7 /* Stepper38.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Stepper38.swift; sourceTree = "<group>"; };
+		01C3FDF22AB8555F000F9AF7 /* Slider39.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Slider39.swift; sourceTree = "<group>"; };
+		01C3FDF42AB85C20000F9AF7 /* TabView40.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabView40.swift; sourceTree = "<group>"; };
+		01C3FDF62AB8707B000F9AF7 /* DarkMode41.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DarkMode41.swift; sourceTree = "<group>"; };
 		01E464422AB30C6F00D3C0D3 /* TextEditor33.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextEditor33.swift; sourceTree = "<group>"; };
 		01E71EED2A868A47009F46B4 /* Icons05.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Icons05.swift; sourceTree = "<group>"; };
 		01E71EEF2A86B5FC009F46B4 /* Image06.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Image06.swift; sourceTree = "<group>"; };
@@ -175,6 +199,7 @@
 		017756482A8559030020020E /* Preview Content */ = {
 			isa = PBXGroup;
 			children = (
+				01E71F0B2A8922AE009F46B4 /* AppWeather001.swift */,
 				017756722A855E540020020E /* Text01.swift */,
 				017756742A86634F0020020E /* Shapes02.swift */,
 				017756762A86687E0020020E /* Color03.swift */,
@@ -193,7 +218,6 @@
 				01E71F032A89011E009F46B4 /* SafeArea17.swift */,
 				01E71F052A890147009F46B4 /* Buttons18.swift */,
 				01E71F072A89015A009F46B4 /* FunctionsSubviews19.swift */,
-				01E71F0B2A8922AE009F46B4 /* AppWeather001.swift */,
 				01B858D22AAF427D00DE93E1 /* Animations20.swift */,
 				01B858D42AB04A1900DE93E1 /* AnimationCurves21.swift */,
 				01B858D62AB04A2D00DE93E1 /* Transitions22.swift */,
@@ -210,6 +234,18 @@
 				01E464422AB30C6F00D3C0D3 /* TextEditor33.swift */,
 				01A6738D2AB31C1100829E6B /* Toggle34.swift */,
 				01A6738F2AB32A2A00829E6B /* Picker35.swift */,
+				01C3FDEC2AB81F52000F9AF7 /* ColorPicker36.swift */,
+				01C3FDEE2AB82482000F9AF7 /* DatePicker37.swift */,
+				01C3FDF02AB83898000F9AF7 /* Stepper38.swift */,
+				01C3FDF22AB8555F000F9AF7 /* Slider39.swift */,
+				01C3FDF42AB85C20000F9AF7 /* TabView40.swift */,
+				01C3FDF62AB8707B000F9AF7 /* DarkMode41.swift */,
+				019A33882AB9799B00251EF8 /* Documentation42.swift */,
+				019A338C2AB98E8600251EF8 /* OnAppearDisappear43.swift */,
+				019A33902AB9A1B900251EF8 /* onTabGesture44.swift */,
+				019A338E2AB9919500251EF8 /* UnWrapGuard45.swift */,
+				019A33922AB9ABFC00251EF8 /* Models46.swift */,
+				019A33942AB9BC3000251EF8 /* ObservableObject47.swift */,
 			);
 			name = "Preview Content";
 			path = "LearningSwiftApp/Preview Content";
@@ -363,19 +399,24 @@
 			files = (
 				017756732A855E540020020E /* Text01.swift in Sources */,
 				01B858E72AB1D3CA00DE93E1 /* Alerts29.swift in Sources */,
+				01C3FDF72AB8707B000F9AF7 /* DarkMode41.swift in Sources */,
 				01E71EF02A86B5FC009F46B4 /* Image06.swift in Sources */,
 				01A673902AB32A2A00829E6B /* Picker35.swift in Sources */,
 				017756442A8559020020020E /* ContentView.swift in Sources */,
 				01F0F1692AB2D64B00485A68 /* ActionSheet30.swift in Sources */,
 				01E71F082A89015A009F46B4 /* FunctionsSubviews19.swift in Sources */,
+				019A33892AB9799B00251EF8 /* Documentation42.swift in Sources */,
 				01E71EF42A86DB14009F46B4 /* Backgrounds08.swift in Sources */,
 				01E464432AB30C6F00D3C0D3 /* TextEditor33.swift in Sources */,
 				01F0F16D2AB2FAFB00485A68 /* TextField32.swift in Sources */,
+				01C3FDF52AB85C20000F9AF7 /* TabView40.swift in Sources */,
 				017756772A86687E0020020E /* Color03.swift in Sources */,
 				01E71EFA2A87E382009F46B4 /* Spacer12.swift in Sources */,
+				01C3FDED2AB81F52000F9AF7 /* ColorPicker36.swift in Sources */,
 				01E71EF62A86E6BF009F46B4 /* Stacks09.swift in Sources */,
 				01E71EFC2A87E39C009F46B4 /* Constructor13.swift in Sources */,
 				01E71F022A890107009F46B4 /* Grid16.swift in Sources */,
+				019A33952AB9BC3000251EF8 /* ObservableObject47.swift in Sources */,
 				01F0F16B2AB2DF7100485A68 /* ContextMenu31.swift in Sources */,
 				01B858E12AB0A09E00DE93E1 /* NavigationView25.swift in Sources */,
 				01E71F0C2A8922AE009F46B4 /* AppWeather001.swift in Sources */,
@@ -384,6 +425,7 @@
 				01E71EF22A86D61F009F46B4 /* Frames07.swift in Sources */,
 				01B858E52AB1AAE000DE93E1 /* Lists28.swift in Sources */,
 				01E71EFE2A87E3AD009F46B4 /* Loops14.swift in Sources */,
+				01C3FDF12AB83898000F9AF7 /* Stepper38.swift in Sources */,
 				01E71EEE2A868A47009F46B4 /* Icons05.swift in Sources */,
 				01B858D72AB04A2D00DE93E1 /* Transitions22.swift in Sources */,
 				017552252AB58F40002FAD6A /* Toolbar27.swift in Sources */,
@@ -395,9 +437,15 @@
 				01E71F042A89011E009F46B4 /* SafeArea17.swift in Sources */,
 				01B858D32AAF427D00DE93E1 /* Animations20.swift in Sources */,
 				01B858E32AB1855000DE93E1 /* NavigationStack26.swift in Sources */,
+				019A33932AB9ABFC00251EF8 /* Models46.swift in Sources */,
+				01C3FDF32AB8555F000F9AF7 /* Slider39.swift in Sources */,
+				019A338F2AB9919500251EF8 /* UnWrapGuard45.swift in Sources */,
 				017756792A8682180020020E /* Gradient04.swift in Sources */,
+				019A338D2AB98E8600251EF8 /* OnAppearDisappear43.swift in Sources */,
 				01E71F062A890147009F46B4 /* Buttons18.swift in Sources */,
 				01E71EF82A87E36F009F46B4 /* Padding11.swift in Sources */,
+				019A33912AB9A1B900251EF8 /* onTabGesture44.swift in Sources */,
+				01C3FDEF2AB82482000F9AF7 /* DatePicker37.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
