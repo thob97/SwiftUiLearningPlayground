@@ -8,16 +8,20 @@
 import SwiftUI
 
 ///takeaways:
-// 1. use var to extract a view only if its static
-// 2. otherwise extract it in new "struct" view
-// 3. use binding if nested view updates it
-// (4. functions can be extracted as well)
-// (5. conditionals and shorter their versions (Ternary Operators) can be used in views)
-
-//maybe? rule of thumb:
-//1. use variables for properties
-//2. functions for logic
-//3. structs for views(graphical) & models(real world to abstract models)
+//1. variables (this 2. for views)
+// 1.1 use them for properties
+// 1.2 use var to extract a view only if its static/ does not need input properties
+//2. functions (this 3. least for views)
+// 2.1 for computable logic
+// 2.2 use functions to extract a view only if it needs input vars & does not make sense to make as a struct
+//3. structs (this 1. for views)
+// 3.1 extract view to new struct if:
+//  3.1.1 it gets reused
+//  3.1.2 it has internal logic (updates something with state vars)
+//  3.1.3 its complex or independent enough to extract in its own subview
+// 3.2 can also be used to model(real world to abstract models)
+//4. use binding if nested view updates it
+//(5. conditionals and shorter their versions (Ternary Operators) can be used in views)
 
 struct Functions19: View {
     @State var dynColor: Color = .blue

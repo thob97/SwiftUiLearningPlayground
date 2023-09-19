@@ -14,6 +14,7 @@ import SwiftUI
 //4. datePicker can be customised to only display wanted parts of a date (date, time, ...)
 //5. a dateFormatter can be used to customise the date String/description
 //6. can be resized, label can be hidden
+//(7. for specific date obj: Calendar.current.date(from: DateComponents())! )
 
 struct DatePicker37: View {
     @State var date = Date()

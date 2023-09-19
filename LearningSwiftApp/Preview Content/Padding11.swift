@@ -9,7 +9,7 @@ import SwiftUI
 
 //takeaway:
 //1. padding is useful as its more adaptive than a fixed size
-//2. padding tries to push away other objects; if this doesn't work due to boundaries, it compresses itself / gets pushed inwards
+//2. padding tries to push away other objects; if this doesn't work due to (screen) boundaries, it compresses itself / gets pushed inwards
 
 struct Padding11: View {
     var body: some View {

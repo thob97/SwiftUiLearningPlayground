@@ -9,6 +9,7 @@ import SwiftUI
 
 //takeaway:
 //1. spacer are useful for aligning other views in a stack (to center, to top, to bottom, ...)
+//2. has minLength option, found no way to scale spacers like in flutter (Spacer(flex))
 
 struct Spacer12: View {
     var body: some View {

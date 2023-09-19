@@ -8,9 +8,7 @@
 import SwiftUI
 
 //TAKEAWAY:
-//1. will animate all changes that are related to the @state property
-// 1.1 either related by condition (state isAnimated: bool)
-// 1.2 (others might also possible but less practical) (eg. related by value (state size: Int)) (but then again this could also be archived by a bool property)
+//1. will animate all changes that are related to the @state property (any type: (bool, values, ...))
 //2. there are two ways to use animation
 // 2.1 withAnimation() in Button (preferred)
 // 2.2 .animation modifier on item, animations are customisable per view -> more fine-grained configuration
@@ -35,7 +33,7 @@ struct Animations20: View {
             AnimatedItemWay1(isAnimated: $isAnimated, angle: $angle, x: $x, y: $y, z: $z)
                 .onTapGesture {
                     //version1 with withAnimation()
-                    withAnimation(.default.delay(0.5).repeatCount(3)){
+                    withAnimation(.default.delay(0.5).repeatCount(3)){ // <- 2.1
                         isAnimated.toggle()
                         angle = Double(Int.random(in: 0...360))
                         x = Double(Int.random(in: -100...100))
@@ -89,7 +87,7 @@ struct AnimatedItemWay2: View {
             .offset( x: isAnimated ? 0 : x, y: isAnimated ? 0 : y)
             .rotation3DEffect(Angle(degrees: angle), axis: (x: x, y: y, z: z))
             //instead of withAnimation() in Button // value: observable
-            .animation(.default.speed(0.2).repeatForever(), value: isAnimated)
+            .animation(.default.speed(0.2).repeatForever(), value: isAnimated) // <- 2.2
             
     }
 }

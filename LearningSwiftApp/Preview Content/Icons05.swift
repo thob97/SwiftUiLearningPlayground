@@ -12,34 +12,51 @@ import SwiftUI
 //2. there are three versions: hierarchical(tint), multicolor(pre defined), pallet(custom)
 
 struct Icons05: View {
+    
+    func myImage() -> some View{
+        return Image(systemName: "cloud.sun.rain.fill")
+        //TODO: change size with font:
+        //.font(.system(size: 34))
+    
+        //TODO: or change size with
+        ///allows icon to resize to max box boundaries
+        .resizable()
+        ///fill or fit icon to box
+        .aspectRatio(contentMode: .fit)
+        .frame(width: 80, height: 100)
+    
+        //TODO: will cut anything out of box
+        //useful when aspectRation == fill
+        .clipped()
+    }
+    
     var body: some View {
-        Image(systemName: "cloud.sun.rain.fill")
-            //TODO: change size with font:
-            //.font(.system(size: 34))
-        
-            //TODO: or change size with
-            ///allows icon to resize to max box boundaries
-            .resizable()
-            ///fill or fit icon to box
-            .aspectRatio(contentMode: .fit)
-            .frame(width: 80, height: 100)
-        
-            //TODO: will cut anything out of box
-            //useful when aspectRation == fill
-            .clipped()
+        ZStack {
+            //Background
+            Color.gray.opacity(0.3).ignoresSafeArea()
             
-            //TODO: for palette color icons (for 3 definable colors)
-//            .symbolRenderingMode(.palette)
-//            .foregroundStyle(.blue,.orange, .red)
-            
-            //TODO: for multicolor (pre defined color)
-//            .symbolRenderingMode(.multicolor)
-        
-            //TODO: for hierarchical color (one color auto map)
-//            .symbolRenderingMode(.hierarchical)
-//            .foregroundStyle(Color.purple)   
+            VStack(spacing: 50) {
+                myImage()
+                
+                //TODO: for palette color icons (for 3 definable colors)
+                myImage()
+                    .symbolRenderingMode(.palette)
+                    .foregroundStyle(.purple,.red, .green)
+                
+                //TODO: for multicolor (pre defined color)
+                myImage()
+                    .symbolRenderingMode(.multicolor)
+                
+                //TODO: for hierarchical color (one color auto map)
+                myImage()
+                    .symbolRenderingMode(.hierarchical)
+                    .foregroundStyle(Color.purple)
+            }
+        }
     }
 }
+
+
 
 struct Icons05_Previews: PreviewProvider {
     static var previews: some View {

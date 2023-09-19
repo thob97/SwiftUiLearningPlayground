@@ -11,7 +11,7 @@ import SwiftUI
 //takeaways:
 //0. scrollview is like a scrollable vStack
 //(1. use scrollViews if your view is bigger than your screen)
-//2. use scrollView with Lazy Stacks -> to load only the items if its really on the screen
+//2. use scrollView with Lazy Stacks -> to load only the items if its really on the screen -> are real lazy
 //3. scrollview has a default spacing, to remove it -> wrap scrollView around a vStack(spacing:0)
 
 struct ScrollView15: View {
@@ -22,7 +22,7 @@ struct ScrollView15: View {
                     ScrollView(.horizontal, showsIndicators: false) {
                         LazyHStack(spacing:0){
                             ForEach(0..<5) {x in
-                                item(x, y)
+                                MyItem(x: x, y: y)
                             }
                         }
                     }
@@ -30,9 +30,20 @@ struct ScrollView15: View {
             }
         }
     }
+}
+
+struct MyItem: View {
+    let x: Int
+    let y: Int
     
-    func item(_ x:Int, _ y: Int) -> some View {
-        return RoundedRectangle(cornerRadius: 25)
+    init(x: Int, y: Int) {
+        self.x = x
+        self.y = y
+        print("x:\(x),y:\(y) was initialised")
+    }
+
+    var body: some View{
+        RoundedRectangle(cornerRadius: 25)
             .fill(.white)
             .frame(width: 200, height: 150)
             .shadow(radius: 10, x: 5, y: 10)
@@ -40,9 +51,12 @@ struct ScrollView15: View {
             .overlay {
                 Text("\(y) \(x)")
             }
+            .onAppear{
+                print("x:\(x),y:\(y) appeared")
+            }
     }
-    
 }
+
 
 struct ScrollView15_Previews: PreviewProvider {
     static var previews: some View {

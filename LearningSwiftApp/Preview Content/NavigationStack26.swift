@@ -9,13 +9,19 @@ import SwiftUI
 
 //takeaways:
 //1. works only for iOS 16 and up
-//2. has lazy loading! (unlike navigation view, loads the sites to navigate to only once when pressed)
-//2.1 for lazy move from navLinks(dest) to navDestinations + navLinks(val)
-//3. allows to push multiple screens at once with PATH, but in most cases navLinks are sufficient and cleaner
+//2. has real lazy loading! (unlike navigation view, loads the sites to navigate to only once when pressed)
+//2.1 for lazy use: navDestinations + navLinks(val), instead of: navLinks(dest)
+//3. allows to push multiple screens at once with the use of PATH + append (but in most cases navLinks are sufficient and cleaner)
 //4. can replace NavigationView without any changes needed (1:1) (but provides additional functions)
+//5. navLinks(val) & type of path can be any (int, string, enum, ...)
+
+enum Pages {
+    case PageA1, PageA2, PageA3
+    case PageN1, PageN2, PageN3
+}
+
 struct NavigationStack26: View {
-    
-    @State private var stackedPages: [String] = []
+    @State private var stackedPages: [Pages] = []
     
     var body: some View {
         //---PATH---
@@ -30,32 +36,42 @@ struct NavigationStack26: View {
                 VStack(spacing: 20) {
                     
                     //push with root option / append / without navigationLink
-                    ForEach(1..<4) { num in
-                        Button("Custom append \(num)") {
-                            stackedPages.append("Append \(num) Page")
-                        }
+                    Button("Button: Append") {
+                        stackedPages.append(Pages.PageA1)
                     }
                     
                     //Append multiple
-                    Button("Append multiple", action: {
-                        stackedPages.append(contentsOf: ["m1","m2","m3"])
+                    Button("Button: Append multiple", action: {
+                        stackedPages.append(contentsOf: [Pages.PageA1, Pages.PageA2, Pages.PageA3])
                     })
                     
                     //with navLink
-                    ForEach(["nav1", "nav2", "nav3"], id: \.self) { val in
-                        NavigationLink("Navigation", value: val)
-
+                    ForEach([Pages.PageN1, Pages.PageN2, Pages.PageN3], id: \.self) { page in
+                        NavigationLink("NavigationLink", value: page)
                     }
                     
-                    //wont work as path only allows string
+                    //wont work as path has type Pages -> int not allowed
                     NavigationLink("Wont work", value: 1)
                 }
             }
             //important
-            .navigationDestination(for: String.self) { val in
-                NextPage(title: val)
+            .navigationDestination(for: Pages.self) { page in
+                switch page {
+                case Pages.PageA1:
+                    NextPage(title: "Append1")
+                case Pages.PageA2:
+                    NextPage(title: "Append2")
+                case Pages.PageA3:
+                    NextPage(title: "Append3")
+                case Pages.PageN1:
+                    NextPage(title: "Nav1")
+                case Pages.PageN2:
+                    NextPage(title: "Nav2")
+                case Pages.PageN3:
+                    NextPage(title: "Nav3")
+                }
             }
-            //is disabled because of different root type
+            //is disabled because PATH is used + has different type
             .navigationDestination(for: Int.self) { num in
                 Text("\(num)")
             }

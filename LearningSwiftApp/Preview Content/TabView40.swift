@@ -10,9 +10,10 @@ import SwiftUI
 //takeaways:
 //(0. bottomAppBar & pageTabView)
 //1. can be used as PageTabView! by changing .tabViewStyle(.page)
-//2. accepts an optional binding with the use of .tag -> allows the tabs to be changed by anything that changes the binding, instead of just when pressing the tab (binding can have any datatype: int, enum, ...)
-//3. background only visible when scrolling -> but can be customised -> Group().toolBarBackground(vis)
-//4. is not lazy -> renders all at once
+//2. for bottomAppBar: items need .tagItem modifier (accepts text+image)
+//3. accepts an optional binding with the use of .tag -> allows the tabs to be changed by anything that changes the binding, instead of just when pressing the tab (binding can have any datatype: int, enum, ...)
+//4. background only visible when scrolling -> but can be customised -> Group().toolBarBackground(vis)
+//5. is cheap lazy -> inits all at once, but only displays items which are on view (.onAppear)
 
 enum PageTab{
     case Home
@@ -86,10 +87,21 @@ struct SettingsPage: View {
 }
 
 struct PageViewPage: View {
+    
+    init() {
+        print("was init")
+    }
+    
     var body: some View{
         TabView {
             Rectangle()
                 .foregroundColor(.orange)
+                .onAppear{
+                    print("orange Appeared")
+                }
+                .onDisappear{
+                    print("orange Disappeared")
+                }
             
             Rectangle()
                 .foregroundColor(.pink)

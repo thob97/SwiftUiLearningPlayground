@@ -10,7 +10,7 @@ import SwiftUI
 //TAKEAWAYS:
 //0. there are sheets and fullscreencovers
 //1. only one .sheet per view possible
-//2. don't add conditional logic to .sheet -> errors -> (but you may add it into the view?)
+//2. seems to be lazy
 //3. to dismiss needs: @Environment(\.presentationMode) (TODO: this does not work if sheet & Environment.dismiss() is in the same struct -> weird?)
 
 struct Sheets23: View {
@@ -31,7 +31,6 @@ struct Sheets23: View {
             //Sheet (needs binding)
             //or fullScreenCover
             .sheet(isPresented: $showSheet) {
-                //DO NOT add conditional logic
                 Sheets23(depth: depth+1)
             }
             

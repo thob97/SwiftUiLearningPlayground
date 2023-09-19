@@ -11,7 +11,8 @@ import SwiftUI
 //1. buttons are highly customisable
 //2. buttons can have a text label or custom labels (can use label view)
 //3. buttons have a role property
-//4. there are predefined buttons: role property, edit, push, toggle, dismiss, rename
+//4. .onTap modification has similar functionality (but button is better imo)
+//5. there are some predefined buttons: role property (destructive, cancel), toggle, slider, stepper, edit, push, dismiss, rename, 
 
 struct Buttons18: View {
     
@@ -20,15 +21,17 @@ struct Buttons18: View {
     
     var body: some View {
         ScrollView {
-            VStack (spacing:30) {
+            VStack (spacing:20) {
                 
-                
-                Text("Last pressed Button: \(pressed)")
-                    .font(.title)
-                    .fontWeight(.semibold)
-                Text("Total times a button was presed: \(count)")
-                    .font(.subheadline)
-                    .fontWeight(.semibold)
+                //Title
+                VStack{
+                    Text("Last pressed Button: \(pressed)")
+                        .font(.title)
+                        .fontWeight(.semibold)
+                    Text("Total times a button was presed: \(count)")
+                        .font(.subheadline)
+                        .fontWeight(.semibold)
+                }
                 
                 
                 //custom button1: text
@@ -110,7 +113,7 @@ struct Buttons18: View {
                 }
                 
                 PredefinedButtons()
-                
+                InSomeWayButtons()
             }
         }
     }
@@ -130,6 +133,28 @@ struct PredefinedButtons: View {
             DismissButton()
             //PasteButton(payloadType: T##Transferable.Protocol, onPaste: T##([Transferable]) -> Void)
             
+        }
+    }
+}
+
+struct InSomeWayButtons: View {
+    @State var toggleBinding: Bool = true
+    @State var stepperBinding: Int = 0
+    @State var sliderBinding: Double = 65
+    
+    var body: some View{
+        VStack {
+            HStack(spacing:20){
+                Toggle("", isOn: $toggleBinding)
+                    .labelsHidden()
+                Toggle("Toggle Button", isOn: $toggleBinding)
+                    .toggleStyle(.button)
+            }
+            Stepper("", value: $stepperBinding)
+                .labelsHidden()
+            
+            Slider(value: $sliderBinding, in: 0...100)
+                .padding(.horizontal, 50)
         }
     }
 }

@@ -9,8 +9,9 @@ import SwiftUI
 
 //Takeaway
 //1. sheets are predefined way to create popovers
-//2. animations & transitions can also be used to archive similar results (but transitions seem bugged)
-//3. transitions & animations are more dynamic, as sheets is a totally new view, while transitions is just like a overlay
+//2. animations & transitions can also be used to archive similar results
+//3. transitions seem bugged -> do not work .withAnimation, only with .animation outside conditional
+//4. transitions & animations are more dynamic as they act like an overlay, while HAS to be a totally new view sheets 
 struct Popover24: View {
     @State var showSheet:Bool = false
     @State var showTransitionItem: Bool = false
