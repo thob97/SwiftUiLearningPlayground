@@ -9,6 +9,7 @@ import SwiftUI
 
 //takeaways:
 //1. text is highly customisable
+//2. all text is by default non selectable, use .textSelection to enable it (long-press for copy/share buttons)
 
 struct Text01: View {
     var body: some View {
@@ -21,6 +22,7 @@ struct Text01: View {
             .underline(true, pattern: Text.LineStyle.Pattern.dot, color: Color.red)
             .baselineOffset(50)
             .frame(width: 400, height: 400, alignment: .bottom)
+            .textSelection(.enabled)
     }
 }
 

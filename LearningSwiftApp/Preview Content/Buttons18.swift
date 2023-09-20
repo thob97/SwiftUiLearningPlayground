@@ -12,92 +12,19 @@ import SwiftUI
 //2. buttons can have a text label or custom labels (can use label view)
 //3. buttons have a role property
 //4. .onTap modification has similar functionality (but button is better imo)
-//5. there are some predefined buttons: role property (destructive, cancel), toggle, slider, stepper, edit, push, dismiss, rename, 
+//5. there are some predefined buttons: role property (destructive, cancel), toggle, slider, stepper, edit, push, dismiss, rename, buttonStyle(plain, borderless, bordered, borderedProminent), buttonBorderShape(.capsule), controlSize(size)
+//6. buttonStyle work with accent color & light/dark mode (however most of the time buttons will still be custom made)
 
 struct Buttons18: View {
     
-    @State var count: Int = 0
-    @State var pressed: String = "None"
+
     
     var body: some View {
         ScrollView {
             VStack (spacing:20) {
                 
-                //Title
-                VStack{
-                    Text("Last pressed Button: \(pressed)")
-                        .font(.title)
-                        .fontWeight(.semibold)
-                    Text("Total times a button was presed: \(count)")
-                        .font(.subheadline)
-                        .fontWeight(.semibold)
-                }
-                
-                
-                //custom button1: text
-                Button("Press me!") {
-                    count = count + 1
-                    pressed = "'Press me!'"
-                }
-                
-                
-                //custom button2
-                Button {
-                    count = count + 1
-                    pressed = "'SAVE'"
-                } label: {
-                    Text("SAVE")
-                        .foregroundColor(.white)
-                        .frame(width: 100, height: 50)
-                        .background(.blue)
-                        .cornerRadius(10)
-                        .shadow(radius: 10)
-                }
-                
-                
-                //custom button3
-                Button {
-                    count = count + 1
-                    pressed = "Heart"
-                } label: {
-                    Image(systemName: "heart.fill")
-                        .font(.largeTitle)
-                        .foregroundColor(.red)
-                        .frame(width: 80, height: 80)
-                        .background(.white)
-                        .cornerRadius(360)
-                        .shadow(radius: 10)
-                }
-                
-                
-                //custom button4
-                Button {
-                    count = count - 1
-                    pressed = "Minus"
-                } label: {
-                    Text("Minus -")
-                        .foregroundColor(.gray)
-                        .padding()
-                        .padding(.horizontal)
-                        .background(
-                            Capsule()
-                                .stroke(.gray)
-                        )
-                }
-                
-                //custom button5: label
-                Button {
-                    
-                } label: {
-                    Label {
-                        Text("Label Button")
-                    } icon: {
-                        Image(systemName: "flame")
-                    }.foregroundColor(.green)
-                }
+                CustomButtons()
 
-                
-                
                 //role button1
                 Button(role: .cancel) {
                     
@@ -114,10 +41,89 @@ struct Buttons18: View {
                 
                 PredefinedButtons()
                 InSomeWayButtons()
+                ButtonStyles()
             }
         }
     }
+}
 
+struct CustomButtons: View {
+    @State var count: Int = 0
+    @State var pressed: String = "None"
+    
+    
+    var body: some View{
+        VStack {
+            //Title
+            VStack{
+                Text("Last pressed Button: \(pressed)")
+                    .font(.title)
+                    .fontWeight(.semibold)
+                Text("Total times a button was presed: \(count)")
+                    .font(.subheadline)
+                    .fontWeight(.semibold)
+            }
+            
+            //custom button1: text
+            Button("Press me!") {
+                count = count + 1
+                pressed = "'Press me!'"
+            }
+            
+            //custom button2
+            Button {
+                count = count + 1
+                pressed = "'SAVE'"
+            } label: {
+                Text("SAVE")
+                    .foregroundColor(.white)
+                    .frame(width: 100, height: 50)
+                    .background(.blue)
+                    .cornerRadius(10)
+                    .shadow(radius: 10)
+            }
+            
+            //custom button3
+            Button {
+                count = count + 1
+                pressed = "Heart"
+            } label: {
+                Image(systemName: "heart.fill")
+                    .font(.largeTitle)
+                    .foregroundColor(.red)
+                    .frame(width: 80, height: 80)
+                    .background(.white)
+                    .cornerRadius(360)
+                    .shadow(radius: 10)
+            }
+            
+            //custom button4
+            Button {
+                count = count - 1
+                pressed = "Minus"
+            } label: {
+                Text("Minus -")
+                    .foregroundColor(.gray)
+                    .padding()
+                    .padding(.horizontal)
+                    .background(
+                        Capsule()
+                            .stroke(.gray)
+                    )
+            }
+            
+            //custom button5: label
+            Button {
+                
+            } label: {
+                Label {
+                    Text("Label Button")
+                } icon: {
+                    Image(systemName: "flame")
+                }.foregroundColor(.green)
+            }
+        }
+    }
 }
 
 struct PredefinedButtons: View {
@@ -158,6 +164,73 @@ struct InSomeWayButtons: View {
         }
     }
 }
+
+
+//work with accent color & dark/light mode
+struct ButtonStyles: View {
+    var body: some View{
+        VStack {
+            HStack {
+                Button("plain") {}
+                    .buttonStyle(.plain)
+                Button("plain") {}
+                    .buttonStyle(.plain)
+                    .buttonBorderShape(.capsule)
+                Button("plain") {}
+                    .buttonStyle(.plain)
+                    .controlSize(.large)
+                Button("plain") {}
+                    .buttonStyle(.plain)
+                    .controlSize(.mini)
+            }
+            
+            HStack {
+                Button("bordered") {}
+                    .buttonStyle(.bordered)
+                Button("bordered") {}
+                    .buttonStyle(.bordered)
+                    .buttonBorderShape(.capsule)
+                Button("bordered") {}
+                    .buttonStyle(.bordered)
+                    .controlSize(.large)
+                Button("bordered") {}
+                    .buttonStyle(.bordered)
+                    .controlSize(.mini)
+            }
+            
+            HStack {
+                Button("borderless") {}
+                    .buttonStyle(.borderless)
+                Button("borderless") {}
+                    .buttonStyle(.borderless)
+                    .buttonBorderShape(.capsule)
+                Button("borderless") {}
+                    .buttonStyle(.borderless)
+                    .controlSize(.large)
+                Button("borderless") {}
+                    .buttonStyle(.borderless)
+                    .controlSize(.mini)
+            }
+            
+            HStack {
+                Button("borderedP") {}
+                    .buttonStyle(.borderedProminent)
+                Button("borderedP") {}
+                    .buttonStyle(.borderedProminent)
+                    .buttonBorderShape(.capsule)
+                Button("borderedP") {}
+                    .buttonStyle(.borderedProminent)
+                    .controlSize(.large)
+                Button("borderedP") {}
+                    .buttonStyle(.borderedProminent)
+                    .controlSize(.mini)
+            }
+            
+
+        }
+    }
+}
+
 
 struct Buttons18_Previews: PreviewProvider {
     static var previews: some View {

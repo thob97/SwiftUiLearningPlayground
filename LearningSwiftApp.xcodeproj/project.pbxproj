@@ -23,7 +23,7 @@
 		019A338F2AB9919500251EF8 /* UnWrapGuard45.swift in Sources */ = {isa = PBXBuildFile; fileRef = 019A338E2AB9919500251EF8 /* UnWrapGuard45.swift */; };
 		019A33912AB9A1B900251EF8 /* onTabGesture44.swift in Sources */ = {isa = PBXBuildFile; fileRef = 019A33902AB9A1B900251EF8 /* onTabGesture44.swift */; };
 		019A33932AB9ABFC00251EF8 /* Models46.swift in Sources */ = {isa = PBXBuildFile; fileRef = 019A33922AB9ABFC00251EF8 /* Models46.swift */; };
-		019A33952AB9BC3000251EF8 /* ObservableObject47.swift in Sources */ = {isa = PBXBuildFile; fileRef = 019A33942AB9BC3000251EF8 /* ObservableObject47.swift */; };
+		019A33952AB9BC3000251EF8 /* MVVC47.swift in Sources */ = {isa = PBXBuildFile; fileRef = 019A33942AB9BC3000251EF8 /* MVVC47.swift */; };
 		01A6738E2AB31C1100829E6B /* Toggle34.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01A6738D2AB31C1100829E6B /* Toggle34.swift */; };
 		01A673902AB32A2A00829E6B /* Picker35.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01A6738F2AB32A2A00829E6B /* Picker35.swift */; };
 		01B858D32AAF427D00DE93E1 /* Animations20.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01B858D22AAF427D00DE93E1 /* Animations20.swift */; };
@@ -57,6 +57,10 @@
 		01E71F062A890147009F46B4 /* Buttons18.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01E71F052A890147009F46B4 /* Buttons18.swift */; };
 		01E71F082A89015A009F46B4 /* FunctionsSubviews19.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01E71F072A89015A009F46B4 /* FunctionsSubviews19.swift */; };
 		01E71F0C2A8922AE009F46B4 /* AppWeather001.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01E71F0B2A8922AE009F46B4 /* AppWeather001.swift */; };
+		01EC564A2ABAD83400489309 /* EnvironmentObject48.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01EC56492ABAD83400489309 /* EnvironmentObject48.swift */; };
+		01EC564C2ABAFBDF00489309 /* AppStorage49.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01EC564B2ABAFBDE00489309 /* AppStorage49.swift */; };
+		01EC564E2ABB032400489309 /* AsyncImage50.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01EC564D2ABB032400489309 /* AsyncImage50.swift */; };
+		01EC56502ABB0C4100489309 /* SystemMaterial51.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01EC564F2ABB0C4100489309 /* SystemMaterial51.swift */; };
 		01F0F1692AB2D64B00485A68 /* ActionSheet30.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01F0F1682AB2D64B00485A68 /* ActionSheet30.swift */; };
 		01F0F16B2AB2DF7100485A68 /* ContextMenu31.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01F0F16A2AB2DF7000485A68 /* ContextMenu31.swift */; };
 		01F0F16D2AB2FAFB00485A68 /* TextField32.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01F0F16C2AB2FAFB00485A68 /* TextField32.swift */; };
@@ -100,7 +104,7 @@
 		019A338E2AB9919500251EF8 /* UnWrapGuard45.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnWrapGuard45.swift; sourceTree = "<group>"; };
 		019A33902AB9A1B900251EF8 /* onTabGesture44.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = onTabGesture44.swift; sourceTree = "<group>"; };
 		019A33922AB9ABFC00251EF8 /* Models46.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Models46.swift; sourceTree = "<group>"; };
-		019A33942AB9BC3000251EF8 /* ObservableObject47.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ObservableObject47.swift; sourceTree = "<group>"; };
+		019A33942AB9BC3000251EF8 /* MVVC47.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MVVC47.swift; sourceTree = "<group>"; };
 		01A6738D2AB31C1100829E6B /* Toggle34.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Toggle34.swift; sourceTree = "<group>"; };
 		01A6738F2AB32A2A00829E6B /* Picker35.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Picker35.swift; sourceTree = "<group>"; };
 		01B858D22AAF427D00DE93E1 /* Animations20.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Animations20.swift; sourceTree = "<group>"; };
@@ -134,6 +138,10 @@
 		01E71F052A890147009F46B4 /* Buttons18.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Buttons18.swift; sourceTree = "<group>"; };
 		01E71F072A89015A009F46B4 /* FunctionsSubviews19.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FunctionsSubviews19.swift; sourceTree = "<group>"; };
 		01E71F0B2A8922AE009F46B4 /* AppWeather001.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppWeather001.swift; sourceTree = "<group>"; };
+		01EC56492ABAD83400489309 /* EnvironmentObject48.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnvironmentObject48.swift; sourceTree = "<group>"; };
+		01EC564B2ABAFBDE00489309 /* AppStorage49.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppStorage49.swift; sourceTree = "<group>"; };
+		01EC564D2ABB032400489309 /* AsyncImage50.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AsyncImage50.swift; sourceTree = "<group>"; };
+		01EC564F2ABB0C4100489309 /* SystemMaterial51.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SystemMaterial51.swift; sourceTree = "<group>"; };
 		01F0F1682AB2D64B00485A68 /* ActionSheet30.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActionSheet30.swift; sourceTree = "<group>"; };
 		01F0F16A2AB2DF7000485A68 /* ContextMenu31.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContextMenu31.swift; sourceTree = "<group>"; };
 		01F0F16C2AB2FAFB00485A68 /* TextField32.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextField32.swift; sourceTree = "<group>"; };
@@ -245,7 +253,11 @@
 				019A33902AB9A1B900251EF8 /* onTabGesture44.swift */,
 				019A338E2AB9919500251EF8 /* UnWrapGuard45.swift */,
 				019A33922AB9ABFC00251EF8 /* Models46.swift */,
-				019A33942AB9BC3000251EF8 /* ObservableObject47.swift */,
+				019A33942AB9BC3000251EF8 /* MVVC47.swift */,
+				01EC56492ABAD83400489309 /* EnvironmentObject48.swift */,
+				01EC564B2ABAFBDE00489309 /* AppStorage49.swift */,
+				01EC564D2ABB032400489309 /* AsyncImage50.swift */,
+				01EC564F2ABB0C4100489309 /* SystemMaterial51.swift */,
 			);
 			name = "Preview Content";
 			path = "LearningSwiftApp/Preview Content";
@@ -414,12 +426,14 @@
 				01E71EFA2A87E382009F46B4 /* Spacer12.swift in Sources */,
 				01C3FDED2AB81F52000F9AF7 /* ColorPicker36.swift in Sources */,
 				01E71EF62A86E6BF009F46B4 /* Stacks09.swift in Sources */,
+				01EC564C2ABAFBDF00489309 /* AppStorage49.swift in Sources */,
 				01E71EFC2A87E39C009F46B4 /* Constructor13.swift in Sources */,
 				01E71F022A890107009F46B4 /* Grid16.swift in Sources */,
-				019A33952AB9BC3000251EF8 /* ObservableObject47.swift in Sources */,
+				019A33952AB9BC3000251EF8 /* MVVC47.swift in Sources */,
 				01F0F16B2AB2DF7100485A68 /* ContextMenu31.swift in Sources */,
 				01B858E12AB0A09E00DE93E1 /* NavigationView25.swift in Sources */,
 				01E71F0C2A8922AE009F46B4 /* AppWeather001.swift in Sources */,
+				01EC564E2ABB032400489309 /* AsyncImage50.swift in Sources */,
 				017756422A8559020020020E /* LearningSwiftAppApp.swift in Sources */,
 				017756752A86634F0020020E /* Shapes02.swift in Sources */,
 				01E71EF22A86D61F009F46B4 /* Frames07.swift in Sources */,
@@ -431,6 +445,7 @@
 				017552252AB58F40002FAD6A /* Toolbar27.swift in Sources */,
 				01A6738E2AB31C1100829E6B /* Toggle34.swift in Sources */,
 				01E71F002A87E3BF009F46B4 /* ScrollView15.swift in Sources */,
+				01EC56502ABB0C4100489309 /* SystemMaterial51.swift in Sources */,
 				01B858D52AB04A1900DE93E1 /* AnimationCurves21.swift in Sources */,
 				01B858DB2AB06E0400DE93E1 /* Sheets23.swift in Sources */,
 				01B858DF2AB08D0400DE93E1 /* Popover24.swift in Sources */,
@@ -441,6 +456,7 @@
 				01C3FDF32AB8555F000F9AF7 /* Slider39.swift in Sources */,
 				019A338F2AB9919500251EF8 /* UnWrapGuard45.swift in Sources */,
 				017756792A8682180020020E /* Gradient04.swift in Sources */,
+				01EC564A2ABAD83400489309 /* EnvironmentObject48.swift in Sources */,
 				019A338D2AB98E8600251EF8 /* OnAppearDisappear43.swift in Sources */,
 				01E71F062A890147009F46B4 /* Buttons18.swift in Sources */,
 				01E71EF82A87E36F009F46B4 /* Padding11.swift in Sources */,
