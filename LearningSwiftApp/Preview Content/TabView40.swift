@@ -16,11 +16,8 @@ import SwiftUI
 //5. is cheap lazy -> inits all at once, but only displays items which are on view (.onAppear)
 
 enum PageTab{
-    case Home
-    case PageView
-    case Settings
+    case Home, PageView, Settings
 }
-
 struct TabView40: View {
     
     @State var currentTab: PageTab = PageTab.Home
@@ -87,11 +84,7 @@ struct SettingsPage: View {
 }
 
 struct PageViewPage: View {
-    
-    init() {
-        print("was init")
-    }
-    
+    init() {print("was init")}
     var body: some View{
         TabView {
             Rectangle()
@@ -108,7 +101,6 @@ struct PageViewPage: View {
             
             Rectangle()
                 .foregroundColor(.yellow)
-
         }
             //change style to pageView
             .tabViewStyle(.page) // <---

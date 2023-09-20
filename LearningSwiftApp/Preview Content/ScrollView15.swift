@@ -13,6 +13,7 @@ import SwiftUI
 //(1. use scrollViews if your view is bigger than your screen)
 //2. use scrollView with Lazy Stacks -> to load only the items if its really on the screen -> are real lazy
 //3. scrollview has a default spacing, to remove it -> wrap scrollView around a vStack(spacing:0)
+//(4. indicator can be hidden)
 
 struct ScrollView15: View {
     var body: some View {

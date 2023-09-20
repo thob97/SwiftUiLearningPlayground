@@ -88,7 +88,6 @@ struct AnimatedItemWay2: View {
             .rotation3DEffect(Angle(degrees: angle), axis: (x: x, y: y, z: z))
             //instead of withAnimation() in Button // value: observable
             .animation(.default.speed(0.2).repeatForever(), value: isAnimated) // <- 2.2
-            
     }
 }
 
