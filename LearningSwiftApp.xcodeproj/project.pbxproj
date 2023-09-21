@@ -18,6 +18,9 @@
 		017756752A86634F0020020E /* Shapes02.swift in Sources */ = {isa = PBXBuildFile; fileRef = 017756742A86634F0020020E /* Shapes02.swift */; };
 		017756772A86687E0020020E /* Color03.swift in Sources */ = {isa = PBXBuildFile; fileRef = 017756762A86687E0020020E /* Color03.swift */; };
 		017756792A8682180020020E /* Gradient04.swift in Sources */ = {isa = PBXBuildFile; fileRef = 017756782A8682180020020E /* Gradient04.swift */; };
+		017A4BB22ABC17DA00327CC8 /* Badges52.swift in Sources */ = {isa = PBXBuildFile; fileRef = 017A4BB12ABC17DA00327CC8 /* Badges52.swift */; };
+		017A4BB42ABC1D2400327CC8 /* Group53.swift in Sources */ = {isa = PBXBuildFile; fileRef = 017A4BB32ABC1D2400327CC8 /* Group53.swift */; };
+		017A4BB62ABC239D00327CC8 /* FocusState54.swift in Sources */ = {isa = PBXBuildFile; fileRef = 017A4BB52ABC239D00327CC8 /* FocusState54.swift */; };
 		019A33892AB9799B00251EF8 /* Documentation42.swift in Sources */ = {isa = PBXBuildFile; fileRef = 019A33882AB9799B00251EF8 /* Documentation42.swift */; };
 		019A338D2AB98E8600251EF8 /* OnAppearDisappear43.swift in Sources */ = {isa = PBXBuildFile; fileRef = 019A338C2AB98E8600251EF8 /* OnAppearDisappear43.swift */; };
 		019A338F2AB9919500251EF8 /* UnWrapGuard45.swift in Sources */ = {isa = PBXBuildFile; fileRef = 019A338E2AB9919500251EF8 /* UnWrapGuard45.swift */; };
@@ -99,6 +102,9 @@
 		017756742A86634F0020020E /* Shapes02.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Shapes02.swift; sourceTree = "<group>"; };
 		017756762A86687E0020020E /* Color03.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Color03.swift; sourceTree = "<group>"; };
 		017756782A8682180020020E /* Gradient04.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Gradient04.swift; sourceTree = "<group>"; };
+		017A4BB12ABC17DA00327CC8 /* Badges52.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Badges52.swift; sourceTree = "<group>"; };
+		017A4BB32ABC1D2400327CC8 /* Group53.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Group53.swift; sourceTree = "<group>"; };
+		017A4BB52ABC239D00327CC8 /* FocusState54.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FocusState54.swift; sourceTree = "<group>"; };
 		019A33882AB9799B00251EF8 /* Documentation42.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Documentation42.swift; sourceTree = "<group>"; };
 		019A338C2AB98E8600251EF8 /* OnAppearDisappear43.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnAppearDisappear43.swift; sourceTree = "<group>"; };
 		019A338E2AB9919500251EF8 /* UnWrapGuard45.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnWrapGuard45.swift; sourceTree = "<group>"; };
@@ -258,6 +264,9 @@
 				01EC564B2ABAFBDE00489309 /* AppStorage49.swift */,
 				01EC564D2ABB032400489309 /* AsyncImage50.swift */,
 				01EC564F2ABB0C4100489309 /* SystemMaterial51.swift */,
+				017A4BB12ABC17DA00327CC8 /* Badges52.swift */,
+				017A4BB32ABC1D2400327CC8 /* Group53.swift */,
+				017A4BB52ABC239D00327CC8 /* FocusState54.swift */,
 			);
 			name = "Preview Content";
 			path = "LearningSwiftApp/Preview Content";
@@ -409,6 +418,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				017A4BB22ABC17DA00327CC8 /* Badges52.swift in Sources */,
 				017756732A855E540020020E /* Text01.swift in Sources */,
 				01B858E72AB1D3CA00DE93E1 /* Alerts29.swift in Sources */,
 				01C3FDF72AB8707B000F9AF7 /* DarkMode41.swift in Sources */,
@@ -442,6 +452,7 @@
 				01C3FDF12AB83898000F9AF7 /* Stepper38.swift in Sources */,
 				01E71EEE2A868A47009F46B4 /* Icons05.swift in Sources */,
 				01B858D72AB04A2D00DE93E1 /* Transitions22.swift in Sources */,
+				017A4BB42ABC1D2400327CC8 /* Group53.swift in Sources */,
 				017552252AB58F40002FAD6A /* Toolbar27.swift in Sources */,
 				01A6738E2AB31C1100829E6B /* Toggle34.swift in Sources */,
 				01E71F002A87E3BF009F46B4 /* ScrollView15.swift in Sources */,
@@ -462,6 +473,7 @@
 				01E71EF82A87E36F009F46B4 /* Padding11.swift in Sources */,
 				019A33912AB9A1B900251EF8 /* onTabGesture44.swift in Sources */,
 				01C3FDEF2AB82482000F9AF7 /* DatePicker37.swift in Sources */,
+				017A4BB62ABC239D00327CC8 /* FocusState54.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

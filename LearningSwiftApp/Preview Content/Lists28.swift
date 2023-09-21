@@ -18,6 +18,8 @@ import SwiftUI
 //7. list can be styled (some can be placed inside list, some only outside)
 //8. list has default style types: 1(automatic, insetGrouped, sidebar(with hide)button)), 2(inset/plain), 3(grouped)
 //9. don't use multiple lists (e.g by stack(list, list)) -> as each list is its own scrollable -> done in this just for demonstration purpose
+//10. list on iOS15 can have custom swipe actions (can be added to sections or single items)
+
 
 struct Lists28: View {
     @State var fruits: [String] = ["Apple","Orange"]
@@ -38,6 +40,11 @@ struct Lists28: View {
                         .onMove(perform: move)
                     }
                     
+                    .swipeActions(edge: .leading,content: {
+                        Button("Save") {}.tint(.green)
+                        Button("Archive"){}.tint(.gray)
+                    })
+                    
                     //Section 2: Styling
                     Section {
                         ForEach(veggies,id: \.self) { val in
@@ -51,6 +58,9 @@ struct Lists28: View {
                         .foregroundColor(.green)
                         .font(.headline)
                     }
+                    
+                    
+                    
                     //Styling: (some be in- or outside of list)
                     .accentColor(.red)
                     .foregroundColor(.white)
@@ -61,6 +71,7 @@ struct Lists28: View {
                 }
                 //Styling: (needs to be outside of list)
                 .listStyle(.sidebar) //adds hide next to section
+                
                 
                 
                 //Navbar
@@ -93,8 +104,6 @@ struct Lists28: View {
                 }
                 .frame(height: 150)
                 .listStyle(.grouped)
-                
-                
             }
         }
     }

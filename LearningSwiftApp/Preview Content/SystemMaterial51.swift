@@ -11,12 +11,6 @@ import SwiftUI
 //1. predefined colours (for backgrounds) (which apple uses in their apps as well -> good for consistent)
 //2. are blurry and opacity
 
-//takeaways:
-//1.
-//2.
-//3.
-//4.
-//5.
 struct SystemMaterial51: View {
     @State var url: URL? = URL(string: "https://picsum.photos/1200")
     

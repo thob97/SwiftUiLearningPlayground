@@ -12,13 +12,10 @@ import SwiftUI
 //2. buttons can have a text label or custom labels (can use label view)
 //3. buttons have a role property
 //4. .onTap modification has similar functionality (but button is better imo)
-//5. there are some predefined buttons: role property (destructive, cancel), toggle, slider, stepper, edit, push, dismiss, rename, buttonStyle(plain, borderless, bordered, borderedProminent), buttonBorderShape(.capsule), controlSize(size)
+//5. there are some predefined buttons: role property (destructive, cancel), toggle, slider, stepper, edit, push, dismiss, rename, buttonStyle(plain, borderless, bordered, borderedProminent), buttonBorderShape(.capsule), controlSize(size), picker, menu
 //6. buttonStyle work with accent color & light/dark mode (however most of the time buttons will still be custom made)
 
 struct Buttons18: View {
-    
-
-    
     var body: some View {
         ScrollView {
             VStack (spacing:20) {
@@ -42,6 +39,7 @@ struct Buttons18: View {
                 PredefinedButtons()
                 InSomeWayButtons()
                 ButtonStyles()
+                Picker35()
             }
         }
     }

@@ -14,7 +14,8 @@ import SwiftUI
 //4. secure textField also exists
 //5. has some minor preconfigured styles -> mostly must be styled ourselves tho
 //6. has default maxWidth infinity
-//7. use .onSubmit & TODO: .focused (for onEditChanged???)
+//7. use .onSubmit(on enter button) & TODO: .focused (for onEditChanged???)
+//8. use .submitLabel(.) for many predefined enter button texts/labels
 
 struct TextField32: View {
     @State var textField1: String = ""
