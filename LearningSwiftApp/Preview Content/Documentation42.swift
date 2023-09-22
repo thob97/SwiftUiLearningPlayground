@@ -62,6 +62,40 @@ struct Documentation42: View {
         return EmptyView()
     }
     
+    /// Description
+    ///
+    /// Discussion
+    ///```
+    ///  CodeBlock
+    /// ```
+    /// - Todo:
+    /// - Author:
+    /// - Attention:
+    /// - Authors:
+    /// - Bug:
+    /// - Complexity:
+    /// - Copyright:
+    /// - Date:
+    /// - Experiment:
+    /// - Important:
+    /// - Invariant:
+    /// - Note:
+    /// - Postcondition:
+    /// - Precondition:
+    /// - Remark:
+    /// - Requires:
+    /// - Since:
+    /// - Version:
+    /// - Warning:
+    /// - Throws:
+    /// - Parameters:
+    ///   - x: x description
+    ///   - text: text description
+    /// - Returns: description
+    func codeSnippet(x: Int ,text:String) -> some View {
+        return EmptyView()
+    }
+    
     #warning("warning")
     //#error("wont compile")
     //TODO: reminder

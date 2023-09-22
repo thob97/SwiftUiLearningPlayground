@@ -13,6 +13,9 @@ import SwiftUI
 // 2.1 withAnimation() in Button (preferred)
 // 2.2 .animation modifier on item, animations are customisable per view -> more fine-grained configuration
 //3. animations: animate objects which are already visible/ on the screen (modifiers)
+//4. standalone useful modifications: roationEffect (to rotate), scaleEffect() (to scale), offset() (to move)
+//use with Animation if you want to animate multiple views over one state var
+//use .animation if you want to animate a single view or more fine-grained over single properties (animation(nil),...animation(...))
 
 struct Animations20: View {
     @State var isAnimated: Bool = false

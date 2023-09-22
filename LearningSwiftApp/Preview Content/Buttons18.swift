@@ -14,6 +14,7 @@ import SwiftUI
 //4. .onTap modification has similar functionality (but button is better imo)
 //5. there are some predefined buttons: role property (destructive, cancel), toggle, slider, stepper, edit, push, dismiss, rename, buttonStyle(plain, borderless, bordered, borderedProminent), buttonBorderShape(.capsule), controlSize(size), picker, menu
 //6. buttonStyle work with accent color & light/dark mode (however most of the time buttons will still be custom made)
+//7. can be disabled with .disabled()
 
 struct Buttons18: View {
     var body: some View {

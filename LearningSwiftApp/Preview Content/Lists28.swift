@@ -8,8 +8,8 @@
 import SwiftUI
 
 //Takeaways
-//(0. like a specialised vStack (always scrollable))
-//1. dynamic & animated list -> useful for modifying (move, delete, add items) or for the good default formatting
+//(0. like a specialised vStack (always scrollable), can have content parameter = forEach)
+//1. dynamic & animated list -> useful for modifying (move, delete, add items) or for the good default formatting (or instead of scrollview + Vstack)
 //2. has good predefined formatting & some others to choose from (sidebar, plain, grouped, ...)
 //3. works great with predefined EditButton() -> (shows delete & move icons)
 //4. lists allows section items to use onDelete, onMove (should be used when its dynamic)
@@ -19,6 +19,7 @@ import SwiftUI
 //8. list has default style types: 1(automatic, insetGrouped, sidebar(with hide)button)), 2(inset/plain), 3(grouped)
 //9. don't use multiple lists (e.g by stack(list, list)) -> as each list is its own scrollable -> done in this just for demonstration purpose
 //10. list on iOS15 can have custom swipe actions (can be added to sections or single items)
+//11 use .listRowInsets(EdgeInsets()) to remove the default padding which items have
 
 
 struct Lists28: View {
@@ -98,8 +99,8 @@ struct Lists28: View {
                     //without section
                     VStack{
                         Image(systemName: "flame")
-                        Text("Flame")
-                    }
+                        Text("listRowInsets(EdgeInsets())")
+                    }.listRowInsets(EdgeInsets())
                     Text("grouped")
                 }
                 .frame(height: 150)

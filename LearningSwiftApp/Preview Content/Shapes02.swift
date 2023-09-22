@@ -10,6 +10,7 @@ import SwiftUI
 //takeaways:
 //1. there are multiple shapes: circle, capsule, rectangle, roundedRectangle
 //2. they are highly customisable
+//3. .clipShape can be useful (.clipShape(Circle()))
 
 struct Shapes02: View {
     var body: some View {

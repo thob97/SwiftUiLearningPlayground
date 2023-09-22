@@ -11,6 +11,7 @@ import SwiftUI
 //1. like observedObject but as global object -> any file / view / object in the HIERARCHY can reference it
 //2. declare by: add on the wanted view the .environmentObject(obj) modifier
 //3. get/reference it by: @EnvironmentObject var paraName: type (types HAVE to match!)
+//7. environment provides: @Environment(\.editMode) var editMode: makes it simple for multiple views to update when the user enters and exits edit mode (works with editButton)
 
 struct Fruit3: Identifiable {
     let id: String = UUID().uuidString

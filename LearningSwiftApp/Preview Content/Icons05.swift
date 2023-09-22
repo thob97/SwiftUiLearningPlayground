@@ -8,7 +8,11 @@
 import SwiftUI
 
 //takeaways:
-//1. change size of icon: with font, or resizeable + aspectRatio + frame (opt: clipped)
+//1. change size of icon with:
+// 1.1 font
+// 1.2 resizeable + aspectRatio + frame (opt: clipped)
+// 1.3 imageScale(),
+// 1.4 minimumScaleFactor(double)(if to big, scale down until)
 //2. there are three versions: hierarchical(tint), multicolor(pre defined), pallet(custom)
 
 struct Icons05: View {

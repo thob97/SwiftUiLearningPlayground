@@ -13,26 +13,25 @@ import SwiftUI
 //3. (automatic title works great with scrollViews. And navigationLink(== push()) has great animation)
 //4. navigationBarHidden(true)(== replacementPush())
 //5. navBar is deprecated for Toolbar(== appBar, navBar, ...)
+//6. list + navigation link work good together = get an auto ">" icon
 struct NavigationView25: View {
     var body: some View {
         NavigationView {
-            ScrollView {
-                //for spacing only
-                VStack(spacing:20) {
-                    
-                    //Nav Item
-                    NavigationLink("Push replace") {
-                        SecondScreen(num: 0)
+            List {
+                //Nav Item
+                NavigationLink("Push replace") {
+                    SecondScreen(num: 0)
                         //push replacement
                         .navigationBarBackButtonHidden()
-                    }
+                }
                     
-                    ForEach(0..<50) { num in
-                        //push
-                        NavigationLink("Push Screen \(num)", destination: SecondScreen(num: num))
-                            .frame(width: UIScreen.main.bounds.width)
+                ForEach(0..<50) { num in
+                    //push
+                    NavigationLink("Push Screen \(num)"){
+                        SecondScreen(num: num)
                     }
                 }
+                
             }
             //Title
             .navigationTitle("App Title")

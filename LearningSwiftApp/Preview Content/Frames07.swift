@@ -9,8 +9,9 @@ import SwiftUI
 
 //takeaway:
 //1. use .infinity or UIScreen.main.bounds.height for maximum space
-//2. use max space or spacer for alignment
+//2. use max space + frame or spacer for alignment
 //3. frame has a alignment property
+//4. use padding or offset() for "small alignments"
 
 struct Frames07: View {
     var body: some View {

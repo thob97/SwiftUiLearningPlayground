@@ -10,10 +10,10 @@ import SwiftUI
 ///takeaways:
 //1. variables (this 2. for views)
 // 1.1 use them for properties
-// 1.2 use var to extract a view only if its static/ does not need input properties
+// 1.2 use var to extract a view only if (its static) & does not need input parameters & is "a part" of its current struct (pro: uses shared memory)
 //2. functions (this 3. least for views)
 // 2.1 for computable logic
-// 2.2 use functions to extract a view only if it needs input vars & does not make sense to make as a struct
+// 2.2 use functions to extract a view only if it needs input vars & does not make sense to make as a struct / (is "a part" of its current struct)
 //3. structs (this 1. for views)
 // 3.1 extract view to new struct if:
 //  3.1.1 it gets reused

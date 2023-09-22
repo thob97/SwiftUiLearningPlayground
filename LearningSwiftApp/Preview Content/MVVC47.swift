@@ -16,6 +16,7 @@ import SwiftUI
 //5. @observedObject is like @state but for objects (updates the view when the object updates) (object needs to inherit from "observableObject")
 //6. @stateObject is like @observedObject but persistent (when VIEW (onAppear) reloads object wont reload as well, but keep its previous state) (useful when going from one page deeper to another, on a back button press -> object does not need to reload) (this does however not hold true for the reversed situation: Page1 -> Page2(State), Page1 <- Page2(State), Page1 -> Page2(creates new object, not persistent) ) (Only the init needs to be state, child's will "inherit" persistence: State -> Observe -> _ === State -> persistent <- _)
 // 6.1 @StateObject -> use on creation / init
+/// 6.1.1 (Use the @StateObject attribute to initialise a model object for a given property only once during the life time of the app)
 // 6.2 @ObservedObject -> use on subviews
 
 class ViewModelFruit: ObservableObject {
