@@ -9,19 +9,13 @@ import SwiftUI
 
 //takeaway:
 //1. useful if you want multiple rows of items
-//2. can have Sections
-//3. sections can be made Pinned
+//2. columns can be fixed size, flexible(as big as possible), adaptive(as many as possible)
+//3. can have pinned sections
+//4. default spacing (row + column) is platform dependent
 
 struct Grid16: View {
     
-    //TODO: annotate's how many columns
-    let content: [GridItem] = [
-        //either single flexible, single fixed, or multiple flexible
-        //spacing => column horizontal padding
-        GridItem(.flexible(), spacing: 0, alignment: .center),
-        GridItem(.flexible(), spacing: 0, alignment: .center),
-        GridItem(.flexible(), spacing: 0, alignment: .center),
-    ]
+
     
     var body: some View {
         ScrollView(){
@@ -31,12 +25,20 @@ struct Grid16: View {
                     .fill(.yellow)
                     .frame(height: 400)
                 
-                //TODO: annotate's the rows
-                //spacing => row vertical padding
-                LazyVGrid(columns: content, alignment: .center, spacing: nil, pinnedViews: [.sectionHeaders]) {
+                
+                LazyVGrid( //<---------
+                    //annotate columns: fixed size, flexible(as big as possible), adaptive(as many as possible)
+                    columns: [ //<---------
+                        GridItem(.flexible()),
+                        GridItem(.fixed(50)),
+                        GridItem(.adaptive(minimum: 50), spacing: nil) //spacing between columns
+                    ],
+                    alignment: .center, //<---------
+                    spacing: nil, //spacing between rows //<---------
+                    pinnedViews: [.sectionHeaders]) { //<---------
                     
-                    //TODO: optional: special section for pinnedView
-                    Section(
+                    //MARK: optional: special section for pinnedView
+                    Section( //<---------
                         header:
                             Text("Section 1")
                             .foregroundColor(.blue)
@@ -45,11 +47,19 @@ struct Grid16: View {
                             .background(.red)
                             .padding(.leading)
                     ){
-                        ///actual items
+                        ///actual flexible items
                         ForEach(0..<50) { i in
-                            Text("\(i)")
-                                .frame(width: 100, height: 150)
-                                .background(.blue)
+                            Rectangle()
+                                .fill(.orange)
+                                .aspectRatio(2/3, contentMode: .fit)
+                                .overlay{
+                                    Text("\(i)")
+                                }
+//                            Text("\(i)")
+//                                .font(.system(size: 200))
+//                                .minimumScaleFactor(0.001) //if font is to big, scale it down
+//                                .aspectRatio(contentMode: .fit)
+//                                .background(.orange)
                         }
                     }
                 }

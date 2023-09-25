@@ -9,10 +9,11 @@ import SwiftUI
 
 //takeaways:
 //1. change size of icon with:
-// 1.1 font
-// 1.2 resizeable + aspectRatio + frame (opt: clipped)
-// 1.3 imageScale(),
-// 1.4 minimumScaleFactor(double)(if to big, scale down until)
+// 1.1 (dynamic) font(system-font)
+// 1.2 (fixed): resizeable() + frame()
+// 1.3 (flexible): resizeable() + aspectRatio(2/3, mode)
+// 1.4 (flexible): font(fixed) + minimumScaleFactor(double)(if to big, scale down until)
+// 1.5 opt: imageScale(), clipped()
 //2. there are three versions: hierarchical(tint), multicolor(pre defined), pallet(custom)
 
 struct Icons05: View {
@@ -27,7 +28,7 @@ struct Icons05: View {
         .resizable()
         ///fill or fit icon to box
         .aspectRatio(contentMode: .fit)
-        .frame(width: 80, height: 100)
+        //.frame(width: 80, height: 100)
     
         //TODO: will cut anything out of box
         //useful when aspectRation == fill
