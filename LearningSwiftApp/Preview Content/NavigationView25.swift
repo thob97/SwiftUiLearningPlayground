@@ -14,6 +14,8 @@ import SwiftUI
 //4. navigationBarHidden(true)(== replacementPush())
 //5. navBar is deprecated for Toolbar(== appBar, navBar, ...)
 //6. list + navigation link work good together = get an auto ">" icon
+//7. navigationLinks can have bindings (so they can be pressed from other functions)
+
 struct NavigationView25: View {
     var body: some View {
         NavigationView {

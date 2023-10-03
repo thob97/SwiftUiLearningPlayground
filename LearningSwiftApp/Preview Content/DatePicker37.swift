@@ -15,6 +15,7 @@ import SwiftUI
 //5. a dateFormatter can be used to customise the date String/description
 //6. can be resized, label can be hidden
 //(7. for specific date obj: Calendar.current.date(from: DateComponents())! )
+//8. multiDatePicker view can be used to offer a full calendar interface, in which multiple dates can be selected (and saved in binding)
 
 struct DatePicker37: View {
     @State var date = Date()
@@ -26,7 +27,8 @@ struct DatePicker37: View {
         formatter.timeStyle = .short
         return formatter
     }
-    
+    @State private var dates: Set<DateComponents> = []
+
     var body: some View {
         VStack(spacing:0){
             //title: display date
@@ -44,6 +46,10 @@ struct DatePicker37: View {
             
             ScrollView {
                 VStack(spacing: 0) {
+                    //MultiDatePicker
+                    MultiDatePicker("Multe", selection: $dates)
+                        .background(Color.brown.opacity(0.3))
+                    
                     //Standard compact
                     DatePicker("Standard compact", selection: $date)
                         .datePickerStyle(.compact)

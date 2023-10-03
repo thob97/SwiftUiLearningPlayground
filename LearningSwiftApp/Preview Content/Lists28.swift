@@ -11,7 +11,7 @@ import SwiftUI
 //(0. like a specialised vStack (always scrollable), can have content parameter = forEach)
 //1. dynamic & animated list -> useful for modifying (move, delete, add items) or for the good default formatting (or instead of scrollview + Vstack)
 //2. has good predefined formatting & some others to choose from (sidebar, plain, grouped, ...)
-//3. works great with predefined EditButton() -> (shows delete & move icons)
+//3. works great with predefined EditButton() -> (shows delete & move icons) (toggles the environment’s editMode value for content within a container that supports edit mode)
 //4. lists allows section items to use onDelete, onMove (should be used when its dynamic)
 //5. section can be used inside lists: provides headers + optional hide button(on .sidebar style)
 //6. list & section content/items can be any view -> highly customisable
@@ -20,6 +20,8 @@ import SwiftUI
 //9. don't use multiple lists (e.g by stack(list, list)) -> as each list is its own scrollable -> done in this just for demonstration purpose
 //10. list on iOS15 can have custom swipe actions (can be added to sections or single items)
 //11 use .listRowInsets(EdgeInsets()) to remove the default padding which items have
+//12 list have many different constructors. e.g. (List(data, id: ){items in ...})
+//13 works well with navigationLink & Badge
 
 
 struct Lists28: View {

@@ -7,11 +7,13 @@
 
 //takeaways
 //1. there are 3 useful styles: segmented, menu, wheel
-//2. TODO: custom labels(custom initial displayed text) are unusable for all 3 versions
+//2. MARK: custom labels(custom initial displayed text) are unusable for all 3 versions
 //3. styling of content is restricted -> can only be archived when using UIKit
 //4. content can at most display text & image, segmented can only display text
-//5. data can be [string], [Int], [enum] ... pick the most fitting -> tag & state var needs to be same type -> so that the state var can "catch the tag" (on change: state var = tag)
+//5. data can be [string], [Int], [enum] ... pick the most fitting -> tag & state var needs to be same type -> so that the state var can "catch the tag" (on change: state var = tag) (tag not always needed???)
 //6. Picker().pickerStyle(menu) can also be created with standalone view: Menu()
+//7. Label can be hidden
+//8. menu_picker and menu somewhat support a sectionView
 
 import SwiftUI
 
@@ -48,8 +50,10 @@ struct Picker35: View {
             
             //menu (content: can display label -> text + pic)
             Picker(selection: $pickedMenu, label: Text("unused")) {
-                ForEach(data, id: \.self) { ele in
-                    Label(ele, systemImage: "flame").tag(ele)
+                Section("Section1") {
+                    ForEach(data, id: \.self) { ele in
+                        Label(ele, systemImage: "flame").tag(ele)
+                    }
                 }
             }
             .padding(10)
@@ -60,8 +64,10 @@ struct Picker35: View {
            
             //standalone menu view
             Menu {
-                Button("Most Recent"){selectedMenu = "Most Recent"}
-                Button("Most Liked"){selectedMenu = "Most Liked"}
+                Section("Section1") {
+                    Button("Most Recent"){selectedMenu = "Most Recent"}
+                    Button("Most Liked"){selectedMenu = "Most Liked"}
+                }
                 Button("Most Popular"){selectedMenu = "Most Popular"}
             } label: {
                 Label(selectedMenu ?? "Initial Value", systemImage: "arrow.up.and.line.horizontal.and.arrow.down")
