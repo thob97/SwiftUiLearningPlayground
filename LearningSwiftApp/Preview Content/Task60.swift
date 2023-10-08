@@ -8,7 +8,7 @@
 import SwiftUI
 
 //takeaways:
-//1. task are used to run async code in view tree
+//1. task are used to run async code in view-tree (+ better version than DispatchQueue())
 //2. multiple task can be run !simultaneously!
 //3. task can have priorities (tells the system which computation to prefer)
 //4. task.sleep() can be used (prob. mostly for testing)

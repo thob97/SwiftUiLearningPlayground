@@ -133,7 +133,7 @@ struct PredefinedButtons: View {
         VStack {
             EditButton()
             PushButton(showSheet: $pushBinding, depth: 5)
-            ToggleButton(isNight: $toggleBinding)
+            //ToggleButton(isNight: $toggleBinding)
             RenameButton()
             DismissButton()
             //PasteButton(payloadType: T##Transferable.Protocol, onPaste: T##([Transferable]) -> Void)

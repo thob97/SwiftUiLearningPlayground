@@ -8,10 +8,10 @@
 import SwiftUI
 
 //takeaways:
-//1. just like listview (styled vstack) but without the ability to dynamically change the data
+//1. just like listview (styled vstack) but without the ability to dynamically(default animated) change the data
 //2. -> has predefined styling
 //3. -> use it if you want the styling, but do not need to dynamically change data
-
+//4. can have swipe action (just like lists)
 
 struct Form62: View {
     @State var toggle = false
@@ -21,6 +21,9 @@ struct Form62: View {
         Form {
             Section(header: Text("Personal Information")) {
                 Text("Name: John Doe")
+                    .swipeActions(edge:.trailing, allowsFullSwipe: false){
+                        Button("H") {}.tint(.green)
+                }
                 Text("Email: john@example.com")
             }
             Section(header: Text("Preferences")) {

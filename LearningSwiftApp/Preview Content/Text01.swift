@@ -15,7 +15,7 @@ import SwiftUI
 struct Text01: View {
     var body: some View {
         VStack {
-            Text("Hello, World! \nthis is more of a test\n than anything else")
+            Text("Hello, World! this is more of a test\n than anything else")
                 .font(.title.bold().width(.compressed).weight(.light))
                 //.bold()
                 //.fontWidth(.compressed)
@@ -23,8 +23,8 @@ struct Text01: View {
             
                 .underline(true, pattern: Text.LineStyle.Pattern.dot, color: Color.red)
                 .baselineOffset(50)
-                .frame(width: 400, height: 400, alignment: .bottom)
-            .textSelection(.enabled)
+                //.frame(width: 400, height: 400, alignment: .bottom)
+                .textSelection(.enabled)
             
             Text("🦊")
             //scale text to maxFit

@@ -31,11 +31,24 @@ struct DoTryCatchThrows58: View {
             if let t = try? throwingFunc(willPass: "optional try") {text1 = t}
             let _ = try? throwingFunc(willPass: "") //will throw error -> nil
             
-            //catch specific error
+            //5.2 catch specific error (with para from enum)
             do {
                 let _ = try throwingFunc(willPass: "")
             } catch CustomError.error1(let msg) {
                 text2 = "\(msg): customError1 was catched"
+            } catch {}
+            
+            //5.2 catch specific error (with switch)
+            do {
+                let _ = try throwingFunc(willPass: "")
+            } catch let error as CustomError {
+                switch error {
+                case .error1(let msg):
+                    text2 = "\(msg): customError1 was catched"
+                default:
+                    print("default")
+                }
+                
             } catch {}
             
             //catch default error

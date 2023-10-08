@@ -29,7 +29,6 @@ struct Lists28: View {
     var veggies: [String] = ["Tomato","Potato","Carrot"]
     
     var body: some View {
-        
         NavigationStack {
             VStack {
                 //style: automatic, insetGrouped, sidebar
@@ -43,6 +42,7 @@ struct Lists28: View {
                         .onMove(perform: move)
                     }
                     
+                    //SwipeAction (works on every ele in Section)
                     .swipeActions(edge: .leading,content: {
                         Button("Save") {}.tint(.green)
                         Button("Archive"){}.tint(.gray)
